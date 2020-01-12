@@ -10,6 +10,7 @@
 		4357FB1D5E7D334A30415012 /* Pods_ProductListMVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E545B02F58EF2CDFC6F4FF24 /* Pods_ProductListMVCTests.framework */; };
 		5F0473DE378DE1262F4CEC40 /* Pods_ProductListMVC_ProductListMVCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CE119EFA5F6BC2B7E5532D /* Pods_ProductListMVC_ProductListMVCUITests.framework */; };
 		C71AF4AAB5FA45C504C5C5E4 /* Pods_ProductListMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE60A283916938713C77FD2B /* Pods_ProductListMVC.framework */; };
+		DE86021323CB784B003E5946 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86021223CB784B003E5946 /* MainCoordinator.swift */; };
 		DE9D023023CB695300AE3641 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D022F23CB695300AE3641 /* AppDelegate.swift */; };
 		DE9D023423CB695300AE3641 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D023323CB695300AE3641 /* ViewController.swift */; };
 		DE9D023723CB695300AE3641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9D023523CB695300AE3641 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		6F09D3B7429FEB8D75293CDC /* Pods-ProductListMVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductListMVC.debug.xcconfig"; path = "Target Support Files/Pods-ProductListMVC/Pods-ProductListMVC.debug.xcconfig"; sourceTree = "<group>"; };
 		7027CC1C82B71C3E40520023 /* Pods-ProductListMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductListMVC.release.xcconfig"; path = "Target Support Files/Pods-ProductListMVC/Pods-ProductListMVC.release.xcconfig"; sourceTree = "<group>"; };
 		B2CE119EFA5F6BC2B7E5532D /* Pods_ProductListMVC_ProductListMVCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductListMVC_ProductListMVCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE86021223CB784B003E5946 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		DE9D022C23CB695300AE3641 /* ProductListMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductListMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D022F23CB695300AE3641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9D023323CB695300AE3641 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE86021123CB783C003E5946 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE86021223CB784B003E5946 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		DE9D022323CB695300AE3641 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		DE9D022E23CB695300AE3641 /* ProductListMVC */ = {
 			isa = PBXGroup;
 			children = (
+				DE86021123CB783C003E5946 /* Coordinator */,
 				DE9D022F23CB695300AE3641 /* AppDelegate.swift */,
 				DE9D023323CB695300AE3641 /* ViewController.swift */,
 				DE9D023523CB695300AE3641 /* Main.storyboard */,
@@ -405,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9D023423CB695300AE3641 /* ViewController.swift in Sources */,
+				DE86021323CB784B003E5946 /* MainCoordinator.swift in Sources */,
 				DE9D023023CB695300AE3641 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

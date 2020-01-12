@@ -2,8 +2,8 @@
 //  CoreTests.swift
 //  CoreTests
 //
-//  Created by Daniel Griso Filho on 10/06/19.
-//  Copyright © 2019 BeBlue. All rights reserved.
+//  Created by Caio de Souza on 12/01/20.
+//  Copyright © 2020 Caio de Souza. All rights reserved.
 //
 
 import XCTest
