@@ -1,0 +1,20 @@
+//
+//  AppDelegate.swift
+//  ProductListMVC
+//
+//  Created by Caio de Souza on 12/01/20.
+//  Copyright © 2020 Caio de Souza. All rights reserved.
+//
+
+import UIKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        return true
+    }
+
+}
+
