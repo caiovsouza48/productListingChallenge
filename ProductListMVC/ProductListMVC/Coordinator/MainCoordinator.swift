@@ -23,7 +23,8 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-    
+        let viewController = ProductContainerViewController.instantiate()
+        navigationController.pushViewController(viewController, animated: false)
     }
 
 }

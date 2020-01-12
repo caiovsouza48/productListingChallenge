@@ -1,16 +1,20 @@
 PODS:
   - Cosmos (20.0.1)
+  - iOSDropDown (0.3.4)
 
 DEPENDENCIES:
   - Cosmos (~> 20.0)
+  - iOSDropDown
 
 SPEC REPOS:
   trunk:
     - Cosmos
+    - iOSDropDown
 
 SPEC CHECKSUMS:
   Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
 
-PODFILE CHECKSUM: e58a11ba2bf02b82a22ea300771159ab35f46d57
+PODFILE CHECKSUM: e22ff2a4cd16e6e2ebea321fdc5aca9266b52e24
 
 COCOAPODS: 1.8.4
