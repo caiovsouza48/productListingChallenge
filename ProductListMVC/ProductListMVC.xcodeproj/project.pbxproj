@@ -27,6 +27,10 @@
 		DE9D024723CB695500AE3641 /* ProductListMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D024623CB695500AE3641 /* ProductListMVCTests.swift */; };
 		DE9D025223CB695500AE3641 /* ProductListMVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9D025123CB695500AE3641 /* ProductListMVCUITests.swift */; };
 		DEDBB86F23CBC6D5000BD5FB /* OfferSortPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBB86E23CBC6D5000BD5FB /* OfferSortPickerViewController.swift */; };
+		DEED534623CCC4FA00A75EB4 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED534523CCC4FA00A75EB4 /* ArrowView.swift */; };
+		DEED534923CCC83400A75EB4 /* ProductCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED534823CCC83400A75EB4 /* ProductCollectionViewController.swift */; };
+		DEED534D23CCC90800A75EB4 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED534B23CCC90800A75EB4 /* ProductCollectionViewCell.swift */; };
+		DEED534E23CCC90800A75EB4 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEED534C23CCC90800A75EB4 /* ProductCollectionViewCell.xib */; };
 		DEFE0FD123CBA4C0005E57FF /* OffersCountPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE0FD023CBA4C0005E57FF /* OffersCountPresentationController.swift */; };
 		DEFE0FD423CBA6E3005E57FF /* ProductAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE0FD323CBA6E3005E57FF /* ProductAPIResponse.swift */; };
 		DEFE0FD623CBA709005E57FF /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE0FD523CBA709005E57FF /* Produto.swift */; };
@@ -96,6 +100,10 @@
 		DE9D025123CB695500AE3641 /* ProductListMVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListMVCUITests.swift; sourceTree = "<group>"; };
 		DE9D025323CB695500AE3641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEDBB86E23CBC6D5000BD5FB /* OfferSortPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferSortPickerViewController.swift; sourceTree = "<group>"; };
+		DEED534523CCC4FA00A75EB4 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		DEED534823CCC83400A75EB4 /* ProductCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewController.swift; sourceTree = "<group>"; };
+		DEED534B23CCC90800A75EB4 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		DEED534C23CCC90800A75EB4 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		DEFE0FD023CBA4C0005E57FF /* OffersCountPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCountPresentationController.swift; sourceTree = "<group>"; };
 		DEFE0FD323CBA6E3005E57FF /* ProductAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPIResponse.swift; sourceTree = "<group>"; };
 		DEFE0FD523CBA709005E57FF /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
@@ -235,6 +243,7 @@
 		DE9D022E23CB695300AE3641 /* ProductListMVC */ = {
 			isa = PBXGroup;
 			children = (
+				DEED534723CCC80100A75EB4 /* ProductCollection */,
 				DEFE0FD923CBA7EB005E57FF /* OfferSortOptions */,
 				DEFE0FD223CBA68A005E57FF /* Model */,
 				DE8602B323CB9FBE003E5946 /* OffersCountViewController */,
@@ -266,6 +275,32 @@
 			path = ProductListMVCUITests;
 			sourceTree = "<group>";
 		};
+		DEED534423CCC4E600A75EB4 /* ArrowView */ = {
+			isa = PBXGroup;
+			children = (
+				DEED534523CCC4FA00A75EB4 /* ArrowView.swift */,
+			);
+			path = ArrowView;
+			sourceTree = "<group>";
+		};
+		DEED534723CCC80100A75EB4 /* ProductCollection */ = {
+			isa = PBXGroup;
+			children = (
+				DEED534A23CCC84400A75EB4 /* ProductCollectionCell */,
+				DEED534823CCC83400A75EB4 /* ProductCollectionViewController.swift */,
+			);
+			path = ProductCollection;
+			sourceTree = "<group>";
+		};
+		DEED534A23CCC84400A75EB4 /* ProductCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEED534B23CCC90800A75EB4 /* ProductCollectionViewCell.swift */,
+				DEED534C23CCC90800A75EB4 /* ProductCollectionViewCell.xib */,
+			);
+			path = ProductCollectionCell;
+			sourceTree = "<group>";
+		};
 		DEFE0FD223CBA68A005E57FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +314,7 @@
 		DEFE0FD923CBA7EB005E57FF /* OfferSortOptions */ = {
 			isa = PBXGroup;
 			children = (
+				DEED534423CCC4E600A75EB4 /* ArrowView */,
 				DEDBB86E23CBC6D5000BD5FB /* OfferSortPickerViewController.swift */,
 				DEFE0FDA23CBA817005E57FF /* OfferSortOptionsViewController.swift */,
 				DEFE0FDC23CBA859005E57FF /* OfferSortOptionsViewController.storyboard */,
@@ -400,6 +436,7 @@
 			files = (
 				DE8602B723CBA034003E5946 /* OffersCountViewController.storyboard in Resources */,
 				DE9D023C23CB695500AE3641 /* LaunchScreen.storyboard in Resources */,
+				DEED534E23CCC90800A75EB4 /* ProductCollectionViewCell.xib in Resources */,
 				DE9D023923CB695500AE3641 /* Assets.xcassets in Resources */,
 				DEFE0FDD23CBA859005E57FF /* OfferSortOptionsViewController.storyboard in Resources */,
 				DE9D023723CB695300AE3641 /* ProductContainerViewController.storyboard in Resources */,
@@ -537,6 +574,9 @@
 				DE9D023023CB695300AE3641 /* AppDelegate.swift in Sources */,
 				DEDBB86F23CBC6D5000BD5FB /* OfferSortPickerViewController.swift in Sources */,
 				DEFE0FD123CBA4C0005E57FF /* OffersCountPresentationController.swift in Sources */,
+				DEED534D23CCC90800A75EB4 /* ProductCollectionViewCell.swift in Sources */,
+				DEED534623CCC4FA00A75EB4 /* ArrowView.swift in Sources */,
+				DEED534923CCC83400A75EB4 /* ProductCollectionViewController.swift in Sources */,
 				DE8602B523CBA00F003E5946 /* OffersCountViewController.swift in Sources */,
 				DEFE0FD423CBA6E3005E57FF /* ProductAPIResponse.swift in Sources */,
 				DEFE0FD823CBA723005E57FF /* Preco.swift in Sources */,

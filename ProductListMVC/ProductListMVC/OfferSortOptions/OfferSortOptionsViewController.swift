@@ -56,6 +56,22 @@ final class OfferSortOptionsViewController: UIViewController {
     private func setupFilterTextField() {
         filterTextField.inputView = pickerView
         filterTextField.inputAccessoryView = toolbar
+        // Setting the Right View with Arrow
+        let rightView = UIView(frame: CGRect(x: 0.0,
+                                             y: 0.0,
+                                             width: filterTextField.frame.height,
+                                             height: filterTextField.frame.height))
+        filterTextField.rightView = rightView
+        filterTextField.rightViewMode = .always
+        let arrowContainerView = UIView(frame: rightView.frame)
+        filterTextField.rightView?.addSubview(arrowContainerView)
+        let arrowContainerCenter = arrowContainerView.center
+        let arrowSize: CGFloat = 15.0
+        
+        let arrow = ArrowView(origin: CGPoint(x: arrowContainerCenter.x - arrowSize / 2,
+                                              y: arrowContainerCenter.y - arrowSize / 2),
+                              size: arrowSize)
+        arrowContainerView.addSubview(arrow)
     }
     
     @objc private func tappedDoneButtonOnToolbar() {
