@@ -24,6 +24,7 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let viewController = ProductContainerViewController.instantiate()
+        viewController.title = "Lista de Produtos"
         navigationController.pushViewController(viewController, animated: false)
     }
 

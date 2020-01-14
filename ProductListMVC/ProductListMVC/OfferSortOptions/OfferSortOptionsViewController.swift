@@ -22,7 +22,7 @@ final class OfferSortOptionsViewController: UIViewController {
     @IBOutlet var filterTextField: UITextField!
     
     // MARK: - Controllers
-    var offerSortOptionController: OfferSortOptionsControllerProvider!
+    var offerSortOptionController: OfferSortOptionsControllerProvider = ProductOfferSortOptionsController()
     var pickerViewController: OfferSortPickerViewController!
     
     // MARK: - View Lifecycle

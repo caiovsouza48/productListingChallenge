@@ -9,6 +9,6 @@
 import Foundation
 
 struct ProductOfferSortOptionsController: OfferSortOptionsControllerProvider {
-    var sortOptions = ["Popularidade", "Disponibilidade", "Nome", "Descrição", "Preço"]
+    var sortOptions = ["Popularidade", "Nome", "Descrição", "Preço"]
     
 }

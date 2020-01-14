@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="40" id="ekM-oE-xDm"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="MzP-gn-hAj" kind="embed" id="VbB-ZO-DaU"/>
+                                    <segue destination="MzP-gn-hAj" kind="embed" identifier="OffersCountViewController" id="VbB-ZO-DaU"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfY-17-cLs">
@@ -31,17 +31,27 @@
                                     <constraint firstAttribute="height" constant="60" id="bNc-HG-bbR"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Ly3-dW-aG1" kind="embed" id="uEL-Vm-GsE"/>
+                                    <segue destination="Ly3-dW-aG1" kind="embed" identifier="OfferSortOptionsViewController" id="uEL-Vm-GsE"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-6d-LS4">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <connections>
+                                    <segue destination="Evk-lS-dYe" kind="embed" identifier="ProductCollectionViewController" id="sHy-4n-fx7"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="9PQ-6d-LS4" firstAttribute="top" secondItem="cfY-17-cLs" secondAttribute="bottom" id="2eU-9e-sqZ"/>
+                            <constraint firstItem="9PQ-6d-LS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DiO-Fi-5a1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9PQ-6d-LS4" secondAttribute="trailing" id="G5Q-Xm-ON3"/>
                             <constraint firstItem="cfY-17-cLs" firstAttribute="leading" secondItem="3x1-Vv-Kis" secondAttribute="leading" id="M2d-ZH-MNx"/>
                             <constraint firstItem="cfY-17-cLs" firstAttribute="trailing" secondItem="3x1-Vv-Kis" secondAttribute="trailing" id="OTe-Tp-v7K"/>
                             <constraint firstItem="3x1-Vv-Kis" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ome-s7-Sud"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3x1-Vv-Kis" secondAttribute="trailing" id="cBr-FN-Vaj"/>
                             <constraint firstItem="3x1-Vv-Kis" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hZv-zR-S2B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9PQ-6d-LS4" secondAttribute="bottom" id="klv-dQ-32O"/>
                             <constraint firstItem="cfY-17-cLs" firstAttribute="top" secondItem="3x1-Vv-Kis" secondAttribute="bottom" id="y1I-wH-ZUV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,6 +76,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0J-25-JjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="-76"/>
+        </scene>
+        <!--ProductCollectionViewController-->
+        <scene sceneID="LTl-lx-BMW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductCollectionViewController" id="Evk-lS-dYe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZX4-uI-anK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="64"/>
         </scene>
     </scenes>
 </document>

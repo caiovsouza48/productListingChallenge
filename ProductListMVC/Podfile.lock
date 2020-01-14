@@ -1,20 +1,20 @@
 PODS:
   - Cosmos (20.0.1)
-  - iOSDropDown (0.3.4)
+  - KRLCollectionViewGridLayout (1.0.0)
 
 DEPENDENCIES:
   - Cosmos (~> 20.0)
-  - iOSDropDown
+  - KRLCollectionViewGridLayout (~> 1.0.0)
 
 SPEC REPOS:
   trunk:
     - Cosmos
-    - iOSDropDown
+    - KRLCollectionViewGridLayout
 
 SPEC CHECKSUMS:
   Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
-  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  KRLCollectionViewGridLayout: 147113b086d446d50b5b8aa907a1c2bc19e89836
 
-PODFILE CHECKSUM: e22ff2a4cd16e6e2ebea321fdc5aca9266b52e24
+PODFILE CHECKSUM: 9c15b979abb2af83448857c44b3877370740d77c
 
 COCOAPODS: 1.8.4

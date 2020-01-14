@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import Common
 import Cosmos
+
 
 class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet var productImageView: UIImageView!
@@ -19,22 +21,35 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let thickness: CGFloat = 1.0
+        let borderColor = UIColor(red: 244.0/255.0, green: 242/255.0, blue: 240/255.0, alpha: 1.0).cgColor
+        layer.addBorder(edge: .bottom, color: borderColor, thickness: thickness)
+        layer.addBorder(edge: .left, color: borderColor, thickness: thickness)
+        layer.addBorder(edge: .right, color: borderColor, thickness: thickness)
+        layer.addBorder(edge: .top, color: borderColor, thickness: thickness)
     }
     
-    func configure(withImage image: UIImage,
-                   description: String?,
+    
+    func configure(withDescription productDescriptionString: String?,
                    rating: Double,
-                   previousPrice: String?,
-                   currentPrice: String?,
-                   installment: String?) {
-        productImageView.image = image
-        productDescription.text = description
+                   previousPrice: Double,
+                   currentPrice: Double,
+                   maxInstallment: Int,
+                   installmentPrice: Double) {
+        productDescription.text = productDescriptionString
         productRatingCosmosVieww.rating = rating
-        previousPriceLabel.text = previousPrice
-        currentPriceLabel.text = currentPrice
-        installmentPriceLabel.text = installment
-        
+        previousPriceLabel.attributedText = attributtedPreviousPrice(previousPrice)
+        currentPriceLabel.text = String.localizedStringWithFormat("R$ %.2f", currentPrice)
+        installmentPriceLabel.text = "\(maxInstallment)x de \(String.localizedStringWithFormat("%.2f", installmentPrice))"
+    }
+    
+    private func attributtedPreviousPrice(_ previousPrice: Double) -> NSAttributedString{
+        let formattedPreviousPrice = String.localizedStringWithFormat("R$ %.2f", previousPrice)
+        let attributtedString = NSMutableAttributedString(string: formattedPreviousPrice)
+        attributtedString.addAttribute(NSAttributedString.Key.strikethroughStyle,
+                                       value: NSUnderlineStyle.single.rawValue,
+                                       range: NSMakeRange(0, attributtedString.length))
+        return attributtedString
     }
 
 }

@@ -15,6 +15,7 @@ enum ArrowPosition {
     case up
 }
 
+/// Createss an Arrow using BezierPath
 class ArrowView: UIView {
     let shapeLayer = CAShapeLayer()
     var arrowColor: UIColor = .black {
@@ -29,15 +30,12 @@ class ArrowView: UIView {
             case .left:
                 self.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
                 break
-
             case .down:
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)
                 break
-
             case .right:
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
                 break
-
             case .up:
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
                 break

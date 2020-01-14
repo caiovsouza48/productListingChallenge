@@ -15,7 +15,7 @@ struct Produto: Codable {
     let disponivel: Bool
     let descricao: String
     let imagemURL: String
-    let classificacao: Int
+    let classificacao: Double
     let preco: Preco
 
     enum CodingKeys: String, CodingKey {

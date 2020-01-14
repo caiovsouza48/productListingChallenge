@@ -12,7 +12,8 @@ import Foundation
 struct Preco: Codable {
     let planoPagamento: String
     let valorParcela: Double
-    let quantidadeMaximaParcelas, precoAtual: Int
+    let quantidadeMaximaParcelas: Int
+    let precoAtual: Double
     let precoAnterior: Double
     let porcentagemDesconto: Int
 }
