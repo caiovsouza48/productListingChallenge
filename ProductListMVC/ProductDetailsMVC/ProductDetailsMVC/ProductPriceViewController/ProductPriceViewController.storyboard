@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWr-7d-odn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Price View Controller-->
+        <scene sceneID="A1Q-jH-Cgd">
+            <objects>
+                <viewController id="oWr-7d-odn" customClass="ProductPriceViewController" customModule="ProductDetailsMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jyR-Xf-rMf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 2.399,98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awz-Fw-Fbe">
+                                <rect key="frame" x="20" y="65" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-AH-uA6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="v2t-KR-5mr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1329,20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoC-Lb-RSp">
+                                <rect key="frame" x="20" y="91" width="149" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ou em até 12x de R$139,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJW-UB-9eT">
+                                <rect key="frame" x="20" y="134" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uJW-UB-9eT" firstAttribute="top" secondItem="xoC-Lb-RSp" secondAttribute="bottom" constant="8" id="1cH-Tx-Lmk"/>
+                            <constraint firstItem="uJW-UB-9eT" firstAttribute="leading" secondItem="xoC-Lb-RSp" secondAttribute="leading" id="2qf-1U-4GX"/>
+                            <constraint firstItem="UFh-ky-cmJ" firstAttribute="trailing" secondItem="Pnp-AH-uA6" secondAttribute="trailing" id="PuF-v4-GGT"/>
+                            <constraint firstItem="xoC-Lb-RSp" firstAttribute="top" secondItem="awz-Fw-Fbe" secondAttribute="bottom" constant="5" id="YAl-Ub-595"/>
+                            <constraint firstItem="Pnp-AH-uA6" firstAttribute="leading" secondItem="UFh-ky-cmJ" secondAttribute="leading" id="YOq-Ru-dqa"/>
+                            <constraint firstItem="xoC-Lb-RSp" firstAttribute="leading" secondItem="awz-Fw-Fbe" secondAttribute="leading" id="bg1-4g-Xah"/>
+                            <constraint firstItem="awz-Fw-Fbe" firstAttribute="top" secondItem="Pnp-AH-uA6" secondAttribute="bottom" constant="20" id="fDO-FC-07f"/>
+                            <constraint firstItem="awz-Fw-Fbe" firstAttribute="leading" secondItem="UFh-ky-cmJ" secondAttribute="leading" constant="20" id="p3w-5z-Qy8"/>
+                            <constraint firstItem="Pnp-AH-uA6" firstAttribute="top" secondItem="UFh-ky-cmJ" secondAttribute="top" id="zQS-Q1-AgY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UFh-ky-cmJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentPriceLabel" destination="xoC-Lb-RSp" id="tlu-9s-kRZ"/>
+                        <outlet property="installmentPriceLabel" destination="uJW-UB-9eT" id="Vle-4a-RVs"/>
+                        <outlet property="oldPriceLabel" destination="awz-Fw-Fbe" id="AsC-ao-Q9b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qa0-eM-RkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="149"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE3145FC23CE101000D0A4AC /* AsyncImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3145FB23CE101000D0A4AC /* AsyncImageDownloader.swift */; };
 		DEED535F23CCE77500A75EB4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED535E23CCE77500A75EB4 /* NSError+.swift */; };
 		DEFE61AE23C7F66E0018208A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFE61A423C7F66E0018208A /* Networking.framework */; };
 		DEFE61B323C7F66E0018208A /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE61B223C7F66E0018208A /* NetworkingTests.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		B6576200AAE1CE0971CBB100 /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3145FB23CE101000D0A4AC /* AsyncImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageDownloader.swift; sourceTree = "<group>"; };
 		DEED535E23CCE77500A75EB4 /* NSError+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		DEFE61A423C7F66E0018208A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFE61A723C7F66E0018208A /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				DEFE61A723C7F66E0018208A /* Networking.h */,
 				DEFE61A823C7F66E0018208A /* Info.plist */,
 				DEED535E23CCE77500A75EB4 /* NSError+.swift */,
+				DE3145FB23CE101000D0A4AC /* AsyncImageDownloader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				DEFE61D723C7F6B30018208A /* ParameterProvider.swift in Sources */,
 				DEFE61DB23C7F6B30018208A /* Method.swift in Sources */,
 				DEFE61DD23C7F6B30018208A /* ParameterEnconding.swift in Sources */,
+				DE3145FC23CE101000D0A4AC /* AsyncImageDownloader.swift in Sources */,
 				DEFE61D523C7F6B30018208A /* NetworkProvider.swift in Sources */,
 				DEFE61DA23C7F6B30018208A /* Endpoint.swift in Sources */,
 				DEFE61DC23C7F6B30018208A /* Formatter+.swift in Sources */,

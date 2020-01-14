@@ -11,6 +11,9 @@ import KRLCollectionViewGridLayout
 
 final class ProductCollectionViewController: UICollectionViewController {
     
+    // MARK: - Action Closure
+    var onSelectItem: ((Produto) -> Void)?
+    
     // MARK: - Variables
     var productDatasourceController: ProductDatasourceController = ProductDatasourceController(dataSource: []) {
         didSet { collectionView.reloadData() }
@@ -60,5 +63,10 @@ final class ProductCollectionViewController: UICollectionViewController {
     
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let produto = productDatasourceController.productAt(indexPath.item)
+        onSelectItem?(produto)
     }
 }

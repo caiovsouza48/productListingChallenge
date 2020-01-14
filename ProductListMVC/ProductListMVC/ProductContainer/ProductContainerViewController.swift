@@ -11,6 +11,9 @@ import UIKit
 /// Container hosting all ViewControllers for the Product List Use Case
 final class ProductContainerViewController: UIViewController {
     
+    // MARK: - Action Closure
+    var onProductSelected: ((Produto) -> Void)?
+    
     // MARK: - Child View Controllers
     var offersCountViewController: OffersCountViewController!
     var offerSortOptionsViewController: OfferSortOptionsViewController!
@@ -60,6 +63,7 @@ final class ProductContainerViewController: UIViewController {
             self.offersCountViewController = segue.destination as? OffersCountViewController
         case "ProductCollectionViewController":
             self.productCollectionViewController = segue.destination as? ProductCollectionViewController
+            self.productCollectionViewController.onSelectItem = onProductSelected
         case "OfferSortOptionsViewController":
             self.offerSortOptionsViewController = segue.destination as? OfferSortOptionsViewController
             self.offerSortOptionsViewController.onPickerRowSelected = { [unowned self] selectedOption in

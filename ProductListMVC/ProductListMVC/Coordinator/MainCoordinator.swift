@@ -9,6 +9,7 @@
 import UIKit
 import Core
 import Common
+import ProductDetailsMVC
 
 class MainCoordinator: Coordinator {
     
@@ -22,10 +23,27 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
+    // MARK: - ProductContainer
+    
     func start() {
         let viewController = ProductContainerViewController.instantiate()
-        viewController.title = "Lista de Produtos"
+        setupProductContainerViewController(viewController)
         navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    private func setupProductContainerViewController(_ viewController: ProductContainerViewController) {
+        viewController.title = "Lista de Produtos"
+        viewController.onProductSelected = { [unowned self] produto in
+            self.goToProductDetails()
+        }
+    }
+    
+    // MARK: - Product Details
+    
+    private func goToProductDetails() {
+        let productDetails = ProductDetailsContainerViewController.instantiate()
+        // TODO: Set the Product
+        navigationController.pushViewController(productDetails, animated: true)
     }
 
 }
