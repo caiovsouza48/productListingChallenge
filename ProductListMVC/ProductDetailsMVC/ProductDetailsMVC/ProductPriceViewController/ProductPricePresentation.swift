@@ -15,6 +15,7 @@ struct ProductPricePresentation {
     let currentPrice: Double
     let maxInstallment: Int
     let installmentPrice: Double
+    let discountPercentage: Int
     
     func attributtedStrikethroughPreviousPrice() -> NSAttributedString {
         let formattedPreviousPrice = String.localizedStringWithFormat("R$ %.2f", previousPrice)
@@ -31,5 +32,13 @@ struct ProductPricePresentation {
     
     func installmentTextString() -> String {
         return "\(maxInstallment)x de R$  \(String.localizedStringWithFormat("%.2f", installmentPrice))"
+    }
+    
+    func discountPercentageString() -> String {
+        return "-\(discountPercentage)%"
+    }
+    
+    func isDiscountPercentageHidden() -> Bool {
+        return discountPercentage <= 0
     }
 }

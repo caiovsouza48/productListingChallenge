@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Common
+import ScrollingContentViewController
 
-public final class ProductDetailsContainerViewController: UIViewController {
+public final class ProductDetailsContainerViewController: ScrollingContentViewController {
     
     // MARK: - Child View Controllers
     var productDetailsImagesViewController: ProductDetailsImagesViewController!
     var productDetailsNameViewController: ProductDetailsNameViewController!
     var productPriceViewController: ProductPriceViewController!
+    var productDescriptionViewController: ProductDescriptionViewController!
     
     // MARK: - Controller
     var productDetailsContainerController: ProductDetailsContainerController = ProductDetailsContainerController()
@@ -41,7 +44,9 @@ public final class ProductDetailsContainerViewController: UIViewController {
                     self.setupProductPriceViewController(previousPrice: apiResponse.modelo.padrao.preco.precoAnterior,
                                                          currentPrice: apiResponse.modelo.padrao.preco.precoAtual,
                                                          maxInstallment: apiResponse.modelo.padrao.preco.quantidadeMaximaParcelas,
-                                                         installmentPrice: apiResponse.modelo.padrao.preco.valorParcela)
+                                                         installmentPrice: apiResponse.modelo.padrao.preco.valorParcela, discountPercentage: apiResponse.modelo.padrao.preco.porcentagemDesconto)
+                    // Description
+                    self.setupProductDescriptionViewController(productDescription: apiResponse.descricao)
                 }
             }
         }
@@ -59,9 +64,27 @@ public final class ProductDetailsContainerViewController: UIViewController {
     private func setupProductPriceViewController(previousPrice: Double,
                                                  currentPrice: Double,
                                                  maxInstallment: Int,
-                                                 installmentPrice: Double) {
-        productPriceViewController.productPricePresentation = ProductPricePresentation(previousPrice: previousPrice, currentPrice: currentPrice, maxInstallment: maxInstallment, installmentPrice: installmentPrice)
-        
+                                                 installmentPrice: Double,
+                                                 discountPercentage: Int) {
+        productPriceViewController.productPricePresentation = ProductPricePresentation(previousPrice: previousPrice, currentPrice: currentPrice, maxInstallment: maxInstallment, installmentPrice: installmentPrice, discountPercentage: discountPercentage)
+        let borderColor = UIColor(red: 244.0/255.0,
+                                  green: 242/255.0,
+                                  blue: 240/255.0,
+                                  alpha: 1.0).cgColor
+        productPriceViewController.view.layer.addBorder(edge: .top,
+                                                        color: borderColor,
+                                                        thickness: 1.0)
+    }
+    
+    private func setupProductDescriptionViewController(productDescription: String?) {
+        let borderColor = UIColor(red: 244.0/255.0,
+                                         green: 242/255.0,
+                                         blue: 240/255.0,
+                                         alpha: 1.0).cgColor
+        productDescriptionViewController.view.layer.addBorder(edge: .top,
+                                                               color: borderColor,
+                                                               thickness: 1.0)
+        productDescriptionViewController.descriptionLabel.text = productDescription
     }
     
     private func showAlert(forError error: Error) {
@@ -85,6 +108,8 @@ public final class ProductDetailsContainerViewController: UIViewController {
             self.productDetailsNameViewController = segue.destination as? ProductDetailsNameViewController
         case "ProductPriceViewController":
             self.productPriceViewController = segue.destination as? ProductPriceViewController
+        case "ProductDescriptionViewController":
+            self.productDescriptionViewController = segue.destination as? ProductDescriptionViewController
         default:
             return
         }

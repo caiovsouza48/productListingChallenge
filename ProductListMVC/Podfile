@@ -8,6 +8,7 @@ target 'ProductListMVC' do
   project 'ProductListMVC.xcodeproj'
   pod 'Cosmos', '~> 20.0'
   pod "KRLCollectionViewGridLayout", "~> 1.0.0"
+  pod 'ScrollingContentViewController'
   
   target 'ProductListMVCTests' do
     inherit! :search_paths
@@ -17,6 +18,11 @@ target 'ProductListMVC' do
   target 'ProductListMVCUITests' do
     # Pods for testing
   end
-
 end
+
+target 'ProductDetailsMVC' do
+  project 'ProductDetailsMVC/ProductDetailsMVC.xcodeproj'
+  pod 'ScrollingContentViewController'
+end
+
 

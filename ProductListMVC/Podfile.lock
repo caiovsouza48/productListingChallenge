@@ -1,20 +1,24 @@
 PODS:
   - Cosmos (20.0.1)
   - KRLCollectionViewGridLayout (1.0.0)
+  - ScrollingContentViewController (1.4.0)
 
 DEPENDENCIES:
   - Cosmos (~> 20.0)
   - KRLCollectionViewGridLayout (~> 1.0.0)
+  - ScrollingContentViewController
 
 SPEC REPOS:
   trunk:
     - Cosmos
     - KRLCollectionViewGridLayout
+    - ScrollingContentViewController
 
 SPEC CHECKSUMS:
   Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
   KRLCollectionViewGridLayout: 147113b086d446d50b5b8aa907a1c2bc19e89836
+  ScrollingContentViewController: 1bff026d6f32c15489dcd22821911eda5fda3801
 
-PODFILE CHECKSUM: 9c15b979abb2af83448857c44b3877370740d77c
+PODFILE CHECKSUM: 25ee8b4e09246f970a74f4e6b998ea8cc39ee662
 
 COCOAPODS: 1.8.4

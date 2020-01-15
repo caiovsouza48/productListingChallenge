@@ -12,7 +12,7 @@ import UIKit
 class ProductPriceViewController: UIViewController {
     
     // MARK: - Controller
-    var productPricePresentation: ProductPricePresentation = ProductPricePresentation(previousPrice: 0.0, currentPrice: 0.0, maxInstallment: 1, installmentPrice: 0.0) {
+    var productPricePresentation: ProductPricePresentation = ProductPricePresentation(previousPrice: 0.0, currentPrice: 0.0, maxInstallment: 1, installmentPrice: 0.0, discountPercentage: 0) {
         didSet {
             setupOldPrice()
             setupCurrentPrice()
@@ -26,6 +26,8 @@ class ProductPriceViewController: UIViewController {
     @IBOutlet var oldPriceLabel: UILabel!
     @IBOutlet var currentPriceLabel: UILabel!
     @IBOutlet var installmentPriceLabel: UILabel!
+    @IBOutlet var discountPercentageLabel: UILabel!
+    @IBOutlet var discountPercentageContainerView: UIView!
     
     // MARK: - View Lifecycle
     
@@ -34,6 +36,7 @@ class ProductPriceViewController: UIViewController {
         setupOldPrice()
         setupCurrentPrice()
         setupInstallmentPriceLabel()
+        setupDiscountPercentage()
     }
     
     private func setupOldPrice() {
@@ -46,5 +49,11 @@ class ProductPriceViewController: UIViewController {
     
     private func setupInstallmentPriceLabel() {
         installmentPriceLabel.text = productPricePresentation.installmentTextString()
+    }
+    
+    private func setupDiscountPercentage() {
+        discountPercentageLabel.text = productPricePresentation.discountPercentageString()
+        discountPercentageLabel.isHidden = productPricePresentation.isDiscountPercentageHidden()
+        discountPercentageContainerView.isHidden = discountPercentageLabel.isHidden
     }
 }
