@@ -17,6 +17,7 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
     var productDetailsNameViewController: ProductDetailsNameViewController!
     var productPriceViewController: ProductPriceViewController!
     var productDescriptionViewController: ProductDescriptionViewController!
+    var productMoreInfoTableViewController: ProductMoreInfoTableViewController!
     
     // MARK: - Controller
     var productDetailsContainerController: ProductDetailsContainerController = ProductDetailsContainerController()
@@ -47,6 +48,9 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
                                                          installmentPrice: apiResponse.modelo.padrao.preco.valorParcela, discountPercentage: apiResponse.modelo.padrao.preco.porcentagemDesconto)
                     // Description
                     self.setupProductDescriptionViewController(productDescription: apiResponse.descricao)
+                    
+                    // More Info
+                    self.productMoreInfoTableViewController.dataSourceController = MoreInfoDataSourceController(dataSource: apiResponse.maisInformacoes)
                 }
             }
         }
@@ -103,13 +107,15 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "ProductDetailsImagesViewController":
-            self.productDetailsImagesViewController = segue.destination as? ProductDetailsImagesViewController
+            productDetailsImagesViewController = segue.destination as? ProductDetailsImagesViewController
         case "ProductDetailsNameViewController":
-            self.productDetailsNameViewController = segue.destination as? ProductDetailsNameViewController
+            productDetailsNameViewController = segue.destination as? ProductDetailsNameViewController
         case "ProductPriceViewController":
-            self.productPriceViewController = segue.destination as? ProductPriceViewController
+            productPriceViewController = segue.destination as? ProductPriceViewController
         case "ProductDescriptionViewController":
-            self.productDescriptionViewController = segue.destination as? ProductDescriptionViewController
+            productDescriptionViewController = segue.destination as? ProductDescriptionViewController
+        case "ProductMoreInfoTableViewController":
+            productMoreInfoTableViewController = segue.destination as? ProductMoreInfoTableViewController
         default:
             return
         }
