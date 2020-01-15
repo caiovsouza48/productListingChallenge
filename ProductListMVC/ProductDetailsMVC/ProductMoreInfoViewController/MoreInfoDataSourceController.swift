@@ -29,5 +29,4 @@ struct MoreInfoDataSourceController {
         return dataSource[section].valores.count
     }
     
-    
 }
