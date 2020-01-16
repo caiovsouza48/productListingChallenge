@@ -12,6 +12,7 @@ final class ProductAvaliationsContainerViewController: UIViewController {
 
     // MARK: - Child View Controller
     var productAvaliationMeanViewController: ProductAvaliationMeanViewController!
+    var productUserAvaliationsTableViewController: ProductUserAvaliationsTableViewController!
 
     // MARK: - Controller
     var avaliationsContainerController: AvaliationsContainerController = AvaliationsContainerController()
@@ -30,6 +31,7 @@ final class ProductAvaliationsContainerViewController: UIViewController {
                 case .success(let apiResponse):
                     self.setupProductAvaliationMeanViewController(rating: apiResponse.classificacao,
                         avaliationsCount: apiResponse.quantidade)
+                    self.setupProductUserAvaliationsTableViewController(dataSource: apiResponse.opinioes)
                     break
                 }
             }
@@ -39,10 +41,17 @@ final class ProductAvaliationsContainerViewController: UIViewController {
     private func setupProductAvaliationMeanViewController(rating: Double, avaliationsCount: Int) {
         productAvaliationMeanViewController.productMeanPresentationController = ProductMeanPresentationController(ratingValue: rating, avaliationsCount: avaliationsCount)
     }
+    
+    private func setupProductUserAvaliationsTableViewController(dataSource: [Opiniao]) {
+        productUserAvaliationsTableViewController.avaliationDataSourceController = AvaliationDataSourceController(dataSource: dataSource)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "ProductAvaliationMeanViewController":
             productAvaliationMeanViewController = segue.destination as? ProductAvaliationMeanViewController
+        case "ProductUserAvaliationsTableViewController":
+            productUserAvaliationsTableViewController = segue.destination as? ProductUserAvaliationsTableViewController
         default:
             return
         }

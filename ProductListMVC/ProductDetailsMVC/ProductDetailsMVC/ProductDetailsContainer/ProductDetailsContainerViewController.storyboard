@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="pib-3q-6ah" customClass="ProductDetailsContainerViewController" customModule="ProductDetailsMVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MpA-hs-pVU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="3000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFC-qd-adm">
@@ -53,7 +53,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="305-cP-AKl">
-                                <rect key="frame" x="0.0" y="891" width="414" height="1885"/>
+                                <rect key="frame" x="0.0" y="891" width="414" height="414"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="305-cP-AKl" secondAttribute="height" multiplier="1:9" priority="240" id="g4b-OR-3xq"/>
                                 </constraints>
@@ -62,9 +62,9 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdl-JG-M9R">
-                                <rect key="frame" x="0.0" y="3816" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="1345" width="414" height="621"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="240" constant="150" id="k9Z-vf-Ysi"/>
+                                    <constraint firstAttribute="width" secondItem="xdl-JG-M9R" secondAttribute="height" multiplier="2:3" id="nig-EX-HjY"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="V3H-tM-HUO" kind="embed" identifier="ProductAvaliationsContainerViewController" id="TQy-Qo-sq2"/>
@@ -96,7 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="eSm-ds-bqS"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="3000"/>
+                    <size key="freeformSize" width="414" height="2000"/>
                     <connections>
                         <outlet property="contentView" destination="MpA-hs-pVU" id="j8m-54-q2m"/>
                     </connections>

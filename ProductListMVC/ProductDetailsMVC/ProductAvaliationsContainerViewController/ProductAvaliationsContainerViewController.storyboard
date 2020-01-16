@@ -27,6 +27,9 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geN-61-670">
                                 <rect key="frame" x="0.0" y="194" width="414" height="668"/>
+                                <connections>
+                                    <segue destination="34h-oj-xJf" kind="embed" identifier="ProductUserAvaliationsTableViewController" id="sj5-SO-1ee"/>
+                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -53,6 +56,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xqh-06-gAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="678" y="-120"/>
+        </scene>
+        <!--ProductUserAvaliationsTableViewController-->
+        <scene sceneID="Pgq-vS-ais">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductUserAvaliationsTableViewController" id="34h-oj-xJf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pan-md-pD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701" y="188"/>
         </scene>
     </scenes>
 </document>
