@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 /// Controls the Data Source for the Info View Controller
 struct MoreInfoDataSourceController {
@@ -17,7 +18,7 @@ struct MoreInfoDataSourceController {
         return dataSource[index]
     }
     
-    func moreInfoValueAt(_ index: Int, section: Int) -> Valores{
+    func moreInfoValueAt(_ index: Int, section: Int) -> Valor{
         return dataSource[section].valores[index]
     }
     

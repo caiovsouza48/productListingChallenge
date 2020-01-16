@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE0D272023CF857400734C34 /* UITableViewHeaderFooterView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D271F23CF857400734C34 /* UITableViewHeaderFooterView+Reusable.swift */; };
+		DE0D272423CFA8F200734C34 /* Sequence+Duplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D272323CFA8F200734C34 /* Sequence+Duplicates.swift */; };
 		DE3461AA23CD0747001BDD3A /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3461A923CD0747001BDD3A /* CALayer+Border.swift */; };
 		DE3461AC23CD0EC6001BDD3A /* Sequence+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3461AB23CD0EC6001BDD3A /* Sequence+KeyPath.swift */; };
 		DE86022823CB7931003E5946 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE86021E23CB7931003E5946 /* Common.framework */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		DE0D271F23CF857400734C34 /* UITableViewHeaderFooterView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Reusable.swift"; sourceTree = "<group>"; };
+		DE0D272323CFA8F200734C34 /* Sequence+Duplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Duplicates.swift"; sourceTree = "<group>"; };
 		DE3461A923CD0747001BDD3A /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
 		DE3461AB23CD0EC6001BDD3A /* Sequence+KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+KeyPath.swift"; sourceTree = "<group>"; };
 		DE86021E23CB7931003E5946 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 				DE86024223CB799A003E5946 /* UICollectionViewCell+Reusable.swift */,
 				DE3461AB23CD0EC6001BDD3A /* Sequence+KeyPath.swift */,
 				DE0D271F23CF857400734C34 /* UITableViewHeaderFooterView+Reusable.swift */,
+				DE0D272323CFA8F200734C34 /* Sequence+Duplicates.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				DE86024D23CB799A003E5946 /* UITableView+Reusable.swift in Sources */,
 				DE0D272023CF857400734C34 /* UITableViewHeaderFooterView+Reusable.swift in Sources */,
 				DE3461AC23CD0EC6001BDD3A /* Sequence+KeyPath.swift in Sources */,
+				DE0D272423CFA8F200734C34 /* Sequence+Duplicates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

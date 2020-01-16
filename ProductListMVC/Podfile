@@ -23,6 +23,7 @@ end
 target 'ProductDetailsMVC' do
   project 'ProductDetailsMVC/ProductDetailsMVC.xcodeproj'
   pod 'ScrollingContentViewController'
+  pod 'Cosmos', '~> 20.0'
 end
 
 

@@ -28,11 +28,11 @@ struct Categoria: Codable {
 // MARK: - MaisInformacoes
 struct MaisInformacoes: Codable {
     let descricao: String
-    let valores: [Valores]
+    let valores: [Valor]
 }
 
 // MARK: - Valores
-struct Valores: Codable {
+struct Valor: Codable {
     let nome, valor: String
 }
 
