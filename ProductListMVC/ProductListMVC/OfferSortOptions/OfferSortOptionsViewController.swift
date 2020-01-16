@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import class UIComponents.ArrowView
 
 /// Displays a view with Sort Options
 final class OfferSortOptionsViewController: UIViewController {

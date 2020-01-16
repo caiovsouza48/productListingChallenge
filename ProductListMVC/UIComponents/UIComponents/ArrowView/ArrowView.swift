@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ArrowPosition {
+public enum ArrowPosition {
     case left
     case down
     case right
@@ -16,7 +16,7 @@ enum ArrowPosition {
 }
 
 /// Createss an Arrow using BezierPath
-class ArrowView: UIView {
+public class ArrowView: UIView {
     let shapeLayer = CAShapeLayer()
     var arrowColor: UIColor = .black {
         didSet {
@@ -43,7 +43,7 @@ class ArrowView: UIView {
         }
     }
 
-    init(origin: CGPoint, size: CGFloat) {
+    public init(origin: CGPoint, size: CGFloat) {
         super.init(frame: CGRect(x: origin.x, y: origin.y, width: size, height: size))
     }
 
@@ -51,7 +51,7 @@ class ArrowView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
 
         // Get size
         let size = self.layer.frame.width
