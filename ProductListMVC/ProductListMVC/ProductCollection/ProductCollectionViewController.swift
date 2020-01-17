@@ -24,17 +24,6 @@ final class ProductCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.registerNibFileBasedCell(cellType: ProductCollectionViewCell.self)
-        setupLayout()
-    }
-    
-    private func setupLayout() {
-        let layout = KRLCollectionViewGridLayout()
-        layout.numberOfItemsPerLine = 2
-        layout.aspectRatio = 180.0 / 300.0;
-        layout.interitemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
-        layout.lineSpacing = 0
-        collectionView.setCollectionViewLayout(layout, animated: false)
     }
     
     // MARK: UICollectionViewDataSource

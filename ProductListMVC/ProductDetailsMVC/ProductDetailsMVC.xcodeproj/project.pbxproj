@@ -269,6 +269,7 @@
 		DE473CCD23CE0251002F841F = {
 			isa = PBXGroup;
 			children = (
+				DEF53F5123D1194C002636DD /* ProductHorizontalCollectionViewController */,
 				DE3CAECA23D0BBC800619041 /* ProductAvaliationsContainerViewController */,
 				DE3CAEC523D0BA1B00619041 /* ProductAvaliatiosMeanViewController */,
 				DE0D270C23CF6BEF00734C34 /* ProductMoreInfoViewController */,
@@ -349,6 +350,13 @@
 				DE8437A223CF4F2400F75B06 /* ProductDescriptionViewController.storyboard */,
 			);
 			path = ProductDescriptionViewController;
+			sourceTree = "<group>";
+		};
+		DEF53F5123D1194C002636DD /* ProductHorizontalCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductHorizontalCollectionViewController;
 			sourceTree = "<group>";
 		};
 		DEF8973723CE5E25001D62FC /* ProductPriceViewController */ = {

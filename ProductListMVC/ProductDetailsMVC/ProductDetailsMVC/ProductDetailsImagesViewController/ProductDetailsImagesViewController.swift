@@ -39,11 +39,11 @@ final class ProductDetailsImagesViewController: UIViewController {
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(imagesDataSourceController.numberOfImages()), height: 0)
         scrollView.isPagingEnabled = true
 
-        for i in 0 ..< imagesDataSourceController.numberOfImages() {
-            let imageView = UIImageView(frame: CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: self.scrollView.frame.height))
+        for index in 0 ..< imagesDataSourceController.numberOfImages() {
+            let imageView = UIImageView(frame: CGRect(x: view.frame.width * CGFloat(index), y: 0, width: view.frame.width, height: self.scrollView.frame.height))
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
-            imagesDataSourceController.asyncImageAt(i) { (downloadedImage) in
+            imagesDataSourceController.asyncImageAt(index) { (downloadedImage) in
                 DispatchQueue.main.async {
                     imageView.image = downloadedImage
                     self.scrollView.addSubview(imageView)

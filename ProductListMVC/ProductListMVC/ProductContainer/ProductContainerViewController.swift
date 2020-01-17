@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRLCollectionViewGridLayout
 
 /// Container hosting all ViewControllers for the Product List Use Case
 final class ProductContainerViewController: UIViewController {
@@ -37,23 +38,38 @@ final class ProductContainerViewController: UIViewController {
                 case .failure(let error):
                    self.showAlert(forError: error)
                 case .success(let apiResponse):
-                    self.offersCountViewController.offersCountPresentation = OffersCountPresentationController(offersCount: apiResponse.quantidade)
-                    self.productCollectionViewController.productDatasourceController = ProductDatasourceController(dataSource: apiResponse.produtos)
+                    self.setupOffersCountViewController(offersCount: apiResponse.quantidade)
+                    self.setupProductCollectionViewController(dataSource: apiResponse.produtos)
                 }
             }
         }
+    }
+    
+    private func setupOffersCountViewController(offersCount: Int) {
+         self.offersCountViewController.offersCountPresentation = OffersCountPresentationController(offersCount: offersCount)
+    }
+    
+    private func setupProductCollectionViewController(dataSource: [Produto]) {
+        self.productCollectionViewController.productDatasourceController = ProductDatasourceController(dataSource: dataSource)
+        let layout = KRLCollectionViewGridLayout()
+        layout.numberOfItemsPerLine = 2
+        layout.aspectRatio = 180.0 / 300.0
+        layout.interitemSpacing = 0
+        layout.sectionInset = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
+        layout.lineSpacing = 0
+        productCollectionViewController.collectionView.setCollectionViewLayout(layout, animated: false)
     }
     
     private func showAlert(forError error: Error) {
         let alertController = UIAlertController(title: "Ops",
                                                 message: error.localizedDescription,
                                                 preferredStyle: .alert)
-        let OkAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         let tryAgainAction = UIAlertAction(title: "Tentar Novamente", style: .default) { [unowned self] (action) in
             self.loadProducts()
         }
         alertController.addAction(tryAgainAction)
-        alertController.addAction(OkAction)
+        alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -75,4 +91,3 @@ final class ProductContainerViewController: UIViewController {
     }
     
 }
-

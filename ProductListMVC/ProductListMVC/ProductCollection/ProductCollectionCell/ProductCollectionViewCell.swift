@@ -10,7 +10,6 @@ import UIKit
 import Common
 import Cosmos
 
-
 class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet var productImageView: UIImageView!
     @IBOutlet var productDescription: UILabel!
@@ -28,8 +27,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         layer.addBorder(edge: .right, color: borderColor, thickness: thickness)
         layer.addBorder(edge: .top, color: borderColor, thickness: thickness)
     }
-    
-    
+        
     func configure(withDescription productDescriptionString: String?,
                    rating: Double,
                    previousPrice: Double,
