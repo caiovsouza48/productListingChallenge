@@ -36,5 +36,3 @@ extension OfferSortPickerViewController: UIPickerViewDelegate {
         return provider.sortOptions[row]
     }
 }
-
-

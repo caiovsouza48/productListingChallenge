@@ -67,8 +67,7 @@ public extension UITableView {
 
     - seealso: `register(_:,forHeaderFooterViewReuseIdentifier:)`
     */
-    final func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type)
-    {
+    final func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) {
         self.register(headerFooterViewType.self, forHeaderFooterViewReuseIdentifier: headerFooterViewType.reuseIdentifier)
     }
 
@@ -83,8 +82,7 @@ public extension UITableView {
     except when your type is in a variable and cannot be determined at compile time.
     - seealso: `dequeueReusableHeaderFooterView(withIdentifier:)`
     */
-    final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type = T.self) -> T?
-    {
+    final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type = T.self) -> T? {
         guard let view = self.dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier) as? T? else {
             fatalError(
                 "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) "

@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="width" secondItem="xdl-JG-M9R" secondAttribute="height" multiplier="2:3" id="nig-EX-HjY"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="V3H-tM-HUO" kind="embed" identifier="ProductAvaliationsContainerViewController" id="TQy-Qo-sq2"/>
+                                    <segue destination="V3H-tM-HUO" kind="embed" identifier="AvaliationsContainerViewController" id="TQy-Qo-sq2"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -145,13 +145,13 @@
             </objects>
             <point key="canvasLocation" x="658" y="362"/>
         </scene>
-        <!--ProductAvaliationsContainerViewController-->
+        <!--AvaliationsContainerViewController-->
         <scene sceneID="o1S-3X-hDP">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProductAvaliationsContainerViewController" id="V3H-tM-HUO" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AvaliationsContainerViewController" id="V3H-tM-HUO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgg-WN-qOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="768"/>
+            <point key="canvasLocation" x="643" y="771"/>
         </scene>
     </scenes>
 </document>

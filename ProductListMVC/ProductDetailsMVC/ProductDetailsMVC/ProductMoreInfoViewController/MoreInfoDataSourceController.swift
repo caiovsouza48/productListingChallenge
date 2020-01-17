@@ -13,12 +13,12 @@ import Common
 struct MoreInfoDataSourceController {
     let dataSource: [MaisInformacoes]
     
-    func infoAt(_ index: Int) -> MaisInformacoes{
+    func infoAt(_ index: Int) -> MaisInformacoes {
         assert(index >= 0, "Index Should be Greater Than Zero")
         return dataSource[index]
     }
     
-    func moreInfoValueAt(_ index: Int, section: Int) -> Valor{
+    func moreInfoValueAt(_ index: Int, section: Int) -> Valor {
         return dataSource[section].valores[index]
     }
     

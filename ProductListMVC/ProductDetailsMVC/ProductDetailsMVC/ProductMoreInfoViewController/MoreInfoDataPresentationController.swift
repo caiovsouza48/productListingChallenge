@@ -10,7 +10,7 @@ import UIKit
 
 struct MoreInfoDataPresentationController {
    
-    static func replacedValueDescription(value: String, withRegex regex: String) -> String{
+    static func replacedValueDescription(value: String, withRegex regex: String) -> String {
         let trimmedValue = value.replacingOccurrences(of: regex, with: "", options: .regularExpression)
         return trimmedValue
     }

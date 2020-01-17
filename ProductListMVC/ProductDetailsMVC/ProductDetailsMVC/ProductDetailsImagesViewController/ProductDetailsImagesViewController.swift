@@ -40,7 +40,10 @@ final class ProductDetailsImagesViewController: UIViewController {
         scrollView.isPagingEnabled = true
 
         for index in 0 ..< imagesDataSourceController.numberOfImages() {
-            let imageView = UIImageView(frame: CGRect(x: view.frame.width * CGFloat(index), y: 0, width: view.frame.width, height: self.scrollView.frame.height))
+            let imageView = UIImageView(frame: CGRect(x: view.frame.width * CGFloat(index),
+                                                      y: 0,
+                                                      width: view.frame.width,
+                                                      height: self.scrollView.frame.height))
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             imagesDataSourceController.asyncImageAt(index) { (downloadedImage) in

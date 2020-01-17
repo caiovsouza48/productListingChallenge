@@ -106,5 +106,3 @@ struct Servico: Codable {
     let preco: Double
     let parcelamento, tipo: String
 }
-
-

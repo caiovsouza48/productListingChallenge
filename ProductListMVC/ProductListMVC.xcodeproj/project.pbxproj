@@ -306,7 +306,8 @@
 				DEED534823CCC83400A75EB4 /* ProductCollectionViewController.swift */,
 				DEED536023CCFA1300A75EB4 /* ProductCollectionViewController.storyboard */,
 			);
-			path = ProductCollection;
+			name = ProductCollection;
+			path = ../UIComponents/UIComponents/ProductCollection;
 			sourceTree = "<group>";
 		};
 		DEED534A23CCC84400A75EB4 /* ProductCollectionCell */ = {
@@ -605,7 +606,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

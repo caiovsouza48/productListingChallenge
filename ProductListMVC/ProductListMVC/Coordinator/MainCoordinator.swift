@@ -42,9 +42,7 @@ class MainCoordinator: Coordinator {
     
     private func goToProductDetails() {
         let productDetails = ProductDetailsContainerViewController.instantiate()
-        // TODO: Set the Product
         navigationController.pushViewController(productDetails, animated: true)
     }
 
 }
-

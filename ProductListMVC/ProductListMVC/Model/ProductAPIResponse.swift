@@ -13,4 +13,3 @@ struct ProductAPIResponse: Codable {
     let produtos: [Produto]
     let quantidade: Int
 }
-

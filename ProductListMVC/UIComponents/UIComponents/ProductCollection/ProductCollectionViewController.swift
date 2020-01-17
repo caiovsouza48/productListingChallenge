@@ -9,13 +9,13 @@
 import UIKit
 import KRLCollectionViewGridLayout
 
-final class ProductCollectionViewController: UICollectionViewController {
+public class ProductCollectionViewController: UICollectionViewController {
     
     // MARK: - Action Closure
     var onSelectItem: ((Produto) -> Void)?
     
     // MARK: - Variables
-    var productDatasourceController: ProductDatasourceController = ProductDatasourceController(dataSource: []) {
+    public var productDatasourceController: ProductDatasourceController = ProductDatasourceController(dataSource: []) {
         didSet { collectionView.reloadData() }
     }
     
@@ -31,7 +31,6 @@ final class ProductCollectionViewController: UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productDatasourceController.numberOfProducts()
@@ -49,7 +48,6 @@ final class ProductCollectionViewController: UICollectionViewController {
                        currentPrice: product.preco.precoAtual,
                        maxInstallment: product.preco.quantidadeMaximaParcelas,
                        installmentPrice: product.preco.valorParcela)
-    
     
         return cell
     }

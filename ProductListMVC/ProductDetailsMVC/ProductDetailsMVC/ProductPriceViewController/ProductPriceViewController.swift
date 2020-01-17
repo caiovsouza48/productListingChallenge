@@ -12,7 +12,8 @@ import UIKit
 class ProductPriceViewController: UIViewController {
     
     // MARK: - Controller
-    var productPricePresentation: ProductPricePresentation = ProductPricePresentation(previousPrice: 0.0, currentPrice: 0.0, maxInstallment: 1, installmentPrice: 0.0, discountPercentage: 0) {
+    var productPricePresentation: ProductPricePresentation = ProductPricePresentation(
+        previousPrice: 0.0, currentPrice: 0.0, maxInstallment: 1, installmentPrice: 0.0, discountPercentage: 0) {
         didSet {
             setupOldPrice()
             setupCurrentPrice()

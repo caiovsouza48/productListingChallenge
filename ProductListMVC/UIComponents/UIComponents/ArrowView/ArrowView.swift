@@ -29,16 +29,12 @@ public class ArrowView: UIView {
             switch position {
             case .left:
                 self.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
-                break
             case .down:
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2)
-                break
             case .right:
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
-                break
             case .up:
                 self.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-                break
             }
         }
     }

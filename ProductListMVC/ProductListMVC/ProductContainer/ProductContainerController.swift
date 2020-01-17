@@ -24,7 +24,7 @@ final class ProductContainerController {
 
     func fetchProducts(completion: @escaping(Result<ProductAPIResponse, ProductListError>) -> Void) {
 
-        productContainerService.requestProductList() { [unowned self] result in
+        productContainerService.requestProductList { [unowned self] result in
             switch result {
             case .success(let response):
                 self.handleResponse(response, completion)

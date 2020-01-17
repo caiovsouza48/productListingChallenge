@@ -17,7 +17,7 @@ struct ImagesDataSourceController {
         return images.count
     }
     
-    func imageAt(index: Int) -> Imagem{
+    func imageAt(index: Int) -> Imagem {
         assert(index >= 0, "Image Index Should be Greater than zero")
         return images[index]
     }
@@ -26,6 +26,5 @@ struct ImagesDataSourceController {
         let image = imageAt(index: index)
         AsyncImageDownloader.download(urlString: image.url, completion: completion)
     }
-    
     
 }

@@ -37,7 +37,7 @@ public class NetworkProvider: NetworkProviderType {
         switch endpoint.task {
         case .requestPlain, .requestJSONEncodable, .requestParameters:
             sendRequest(request, completion: completion)
-        case .uploadFile(_):
+        case .uploadFile:
             sendUploadFile(request)
         case .downloadDestination:
             sendDownloadRequest(request)

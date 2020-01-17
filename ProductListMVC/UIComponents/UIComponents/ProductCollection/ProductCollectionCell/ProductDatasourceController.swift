@@ -17,14 +17,14 @@ struct ProductDatasourceController {
         return dataSource.count
     }
     
-    func productAt(_ index: Int) -> Produto{
+    func productAt(_ index: Int) -> Produto {
         assert(index >= 0, "Index Should be greater than zero")
         return dataSource[index]
     }
     
     func asyncImageFor(productUrl: String, completion: @escaping ((UIImage?) -> Void)) {
         guard let concreteURL = URL(string: productUrl) else { return }
-        URLSession.shared.dataTask(with: concreteURL) { (data, urlResponse, error) in
+        URLSession.shared.dataTask(with: concreteURL) { (data, _, error) in
             guard let data = data, error == nil else { return }
             let imageFromData = UIImage(data: data)
             completion(imageFromData)

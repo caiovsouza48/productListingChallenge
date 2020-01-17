@@ -36,4 +36,3 @@ extension ProductListEndpoint: Endpoint {
     }
     
 }
-

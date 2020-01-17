@@ -21,7 +21,6 @@ final class ProductMoreInfoTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "TitleLabelHeader", bundle: Bundle(for: type(of: self))), forHeaderFooterViewReuseIdentifier: "TitleLabelHeader")
         tableView.registerNibFileBasedCell(cellType: MoreInfoTableViewCell.self)
 
-
     }
 
     override func viewWillLayoutSubviews() {
@@ -39,7 +38,6 @@ final class ProductMoreInfoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSourceController.numberOfValues(forSection: section)
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MoreInfoTableViewCell.self)

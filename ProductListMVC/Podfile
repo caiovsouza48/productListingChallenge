@@ -26,4 +26,10 @@ target 'ProductDetailsMVC' do
   pod 'Cosmos', '~> 20.0'
 end
 
+target 'UIComponents' do
+  project 'UIComponents/UIComponents.xcodeproj'
+  pod "KRLCollectionViewGridLayout", "~> 1.0.0"
+end
+
+
 

@@ -12,5 +12,4 @@ import Foundation
 protocol OfferSortOptionsControllerProvider {
     var sortOptions: [String] { get set }
     
-    
 }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class ProductAvaliationsContainerViewController: UIViewController {
+final class AvaliationsContainerViewController: UIViewController {
 
     // MARK: - Child View Controller
     var productAvaliationMeanViewController: ProductAvaliationMeanViewController!
-    var productUserAvaliationsTableViewController: ProductUserAvaliationsTableViewController!
+    var userAvaliationsTableViewController: ProductUserAvaliationsTableViewController!
 
     // MARK: - Controller
     var avaliationsContainerController: AvaliationsContainerController = AvaliationsContainerController()
@@ -26,24 +26,24 @@ final class ProductAvaliationsContainerViewController: UIViewController {
         avaliationsContainerController.fetchAvaliations { (result) in
             DispatchQueue.main.async {
                 switch result {
-                case .failure(_):
+                case .failure:
                     return
                 case .success(let apiResponse):
                     self.setupProductAvaliationMeanViewController(rating: apiResponse.classificacao,
                         avaliationsCount: apiResponse.quantidade)
                     self.setupProductUserAvaliationsTableViewController(dataSource: apiResponse.opinioes)
-                    break
                 }
             }
         }
     }
 
     private func setupProductAvaliationMeanViewController(rating: Double, avaliationsCount: Int) {
-        productAvaliationMeanViewController.productMeanPresentationController = ProductMeanPresentationController(ratingValue: rating, avaliationsCount: avaliationsCount)
+        productAvaliationMeanViewController.productMeanPresentationController = ProductMeanPresentationController(ratingValue: rating,
+                                              avaliationsCount: avaliationsCount)
     }
     
     private func setupProductUserAvaliationsTableViewController(dataSource: [Opiniao]) {
-        productUserAvaliationsTableViewController.avaliationDataSourceController = AvaliationDataSourceController(dataSource: dataSource)
+        userAvaliationsTableViewController.avaliationDataSourceController = AvaliationDataSourceController(dataSource: dataSource)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,7 +51,7 @@ final class ProductAvaliationsContainerViewController: UIViewController {
         case "ProductAvaliationMeanViewController":
             productAvaliationMeanViewController = segue.destination as? ProductAvaliationMeanViewController
         case "ProductUserAvaliationsTableViewController":
-            productUserAvaliationsTableViewController = segue.destination as? ProductUserAvaliationsTableViewController
+            userAvaliationsTableViewController = segue.destination as? ProductUserAvaliationsTableViewController
         default:
             return
         }

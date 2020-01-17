@@ -27,7 +27,8 @@ class ProductCollectionViewCell: UICollectionViewCell {
         layer.addBorder(edge: .right, color: borderColor, thickness: thickness)
         layer.addBorder(edge: .top, color: borderColor, thickness: thickness)
     }
-        
+    
+    // swiftlint:disable function_parameter_count
     func configure(withDescription productDescriptionString: String?,
                    rating: Double,
                    previousPrice: Double,
@@ -41,12 +42,12 @@ class ProductCollectionViewCell: UICollectionViewCell {
         installmentPriceLabel.text = "\(maxInstallment)x de \(String.localizedStringWithFormat("%.2f", installmentPrice))"
     }
     
-    private func attributtedPreviousPrice(_ previousPrice: Double) -> NSAttributedString{
+    private func attributtedPreviousPrice(_ previousPrice: Double) -> NSAttributedString {
         let formattedPreviousPrice = String.localizedStringWithFormat("R$ %.2f", previousPrice)
         let attributtedString = NSMutableAttributedString(string: formattedPreviousPrice)
         attributtedString.addAttribute(NSAttributedString.Key.strikethroughStyle,
                                        value: NSUnderlineStyle.single.rawValue,
-                                       range: NSMakeRange(0, attributtedString.length))
+                                       range: NSRange(location: 0, length: attributtedString.length))
         return attributtedString
     }
 

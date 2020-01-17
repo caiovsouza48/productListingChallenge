@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Container List View Controller-->
+        <scene sceneID="9Vt-7G-yla">
+            <objects>
+                <viewController id="3BM-I1-TXW" customClass="ProductContainerListViewController" customModule="ProductDetailsMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lOU-bF-tbf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukb-Vm-x7D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="H8F-mC-Jpb" kind="embed" identifier="ProductCollectionViewController" id="J80-h2-khw"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ukb-Vm-x7D" firstAttribute="top" secondItem="Ig4-Da-en4" secondAttribute="top" id="cBY-jM-Z8F"/>
+                            <constraint firstItem="ukb-Vm-x7D" firstAttribute="leading" secondItem="Ig4-Da-en4" secondAttribute="leading" id="sK9-Gg-aWj"/>
+                            <constraint firstItem="Ig4-Da-en4" firstAttribute="bottom" secondItem="ukb-Vm-x7D" secondAttribute="bottom" id="uy7-Gm-GAw"/>
+                            <constraint firstItem="Ig4-Da-en4" firstAttribute="trailing" secondItem="ukb-Vm-x7D" secondAttribute="trailing" id="uyP-GH-EVO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ig4-Da-en4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfl-3n-nvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="107"/>
+        </scene>
+        <!--ProductCollectionViewController-->
+        <scene sceneID="er2-5K-qyn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductCollectionViewController" id="H8F-mC-Jpb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onj-jE-Euf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="106"/>
+        </scene>
+    </scenes>
+</document>

@@ -22,7 +22,7 @@ struct ProductPricePresentation {
         let attributtedString = NSMutableAttributedString(string: formattedPreviousPrice)
         attributtedString.addAttribute(NSAttributedString.Key.strikethroughStyle,
                                        value: NSUnderlineStyle.single.rawValue,
-                                       range: NSMakeRange(0, attributtedString.length))
+                                       range: NSRange(location: 0, length: attributtedString.length))
         return attributtedString
     }
     

@@ -65,7 +65,7 @@ final class ProductContainerViewController: UIViewController {
                                                 message: error.localizedDescription,
                                                 preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        let tryAgainAction = UIAlertAction(title: "Tentar Novamente", style: .default) { [unowned self] (action) in
+        let tryAgainAction = UIAlertAction(title: "Tentar Novamente", style: .default) { [unowned self] (_) in
             self.loadProducts()
         }
         alertController.addAction(tryAgainAction)

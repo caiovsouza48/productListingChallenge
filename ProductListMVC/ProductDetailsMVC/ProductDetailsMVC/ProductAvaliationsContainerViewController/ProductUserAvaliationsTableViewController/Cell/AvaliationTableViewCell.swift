@@ -10,14 +10,12 @@ import UIKit
 import Cosmos
 
 class AvaliationTableViewCell: UITableViewCell {
-
     
     // MARK: - IBOutlets
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var usernameLabel: UILabel!
     @IBOutlet private var cosmosRatingView: CosmosView!
     @IBOutlet private var descriptionLabel: UILabel!
-    
     
     func configure(withDate date: String, username: String, rating: Double, descriptionString: String) {
         dateLabel.text = date

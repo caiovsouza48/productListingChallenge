@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7719798D77656B4B90CED92E /* Pods_UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89AD23B0C78F109DD15D808 /* Pods_UIComponents.framework */; };
 		DE0A364423D1166C007B19CB /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A363A23D1166C007B19CB /* UIComponents.framework */; };
 		DE0A364923D1166C007B19CB /* UIComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0A364823D1166C007B19CB /* UIComponentsTests.swift */; };
 		DE0A364B23D1166C007B19CB /* UIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0A363D23D1166C007B19CB /* UIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,12 +25,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2B61C80763D2D27C5E9AA1 /* Pods-UIComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponents.release.xcconfig"; path = "Target Support Files/Pods-UIComponents/Pods-UIComponents.release.xcconfig"; sourceTree = "<group>"; };
+		A3A8E38867383EC8F5277DBC /* Pods-UIComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponents.debug.xcconfig"; path = "Target Support Files/Pods-UIComponents/Pods-UIComponents.debug.xcconfig"; sourceTree = "<group>"; };
+		C89AD23B0C78F109DD15D808 /* Pods_UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0A363A23D1166C007B19CB /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0A363D23D1166C007B19CB /* UIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponents.h; sourceTree = "<group>"; };
 		DE0A363E23D1166C007B19CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE0A364323D1166C007B19CB /* UIComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0A364823D1166C007B19CB /* UIComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsTests.swift; sourceTree = "<group>"; };
 		DE0A364A23D1166C007B19CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE2D9F523D2227800D3BF3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		DEE2D9F623D2227800D3BF3E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		DEE2D9F723D2227800D3BF3E /* ProductDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDatasourceController.swift; sourceTree = "<group>"; };
+		DEE2D9F923D2227800D3BF3E /* ProductCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewController.swift; sourceTree = "<group>"; };
+		DEE2D9FA23D2227800D3BF3E /* ProductCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductCollectionViewController.storyboard; sourceTree = "<group>"; };
 		DEF53F4E23D117C5002636DD /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7719798D77656B4B90CED92E /* Pods_UIComponents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +62,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		266A1BC250BA389D3F38D682 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C89AD23B0C78F109DD15D808 /* Pods_UIComponents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AE893934740F5FC294438E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8E38867383EC8F5277DBC /* Pods-UIComponents.debug.xcconfig */,
+				1E2B61C80763D2D27C5E9AA1 /* Pods-UIComponents.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		DE0A363023D1166C007B19CB = {
 			isa = PBXGroup;
 			children = (
 				DE0A363C23D1166C007B19CB /* UIComponents */,
 				DE0A364723D1166C007B19CB /* UIComponentsTests */,
 				DE0A363B23D1166C007B19CB /* Products */,
+				5AE893934740F5FC294438E4 /* Pods */,
+				266A1BC250BA389D3F38D682 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +103,7 @@
 		DE0A363C23D1166C007B19CB /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				DEE2D9FB23D2227800D3BF3E /* ProductCollection */,
 				DE0A365523D116C9007B19CB /* ArrowView */,
 				DE0A363D23D1166C007B19CB /* UIComponents.h */,
 				DE0A363E23D1166C007B19CB /* Info.plist */,
@@ -97,6 +128,26 @@
 			path = ArrowView;
 			sourceTree = "<group>";
 		};
+		DEE2D9F823D2227800D3BF3E /* ProductCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2D9F523D2227800D3BF3E /* ProductCollectionViewCell.swift */,
+				DEE2D9F623D2227800D3BF3E /* ProductCollectionViewCell.xib */,
+				DEE2D9F723D2227800D3BF3E /* ProductDatasourceController.swift */,
+			);
+			path = ProductCollectionCell;
+			sourceTree = "<group>";
+		};
+		DEE2D9FB23D2227800D3BF3E /* ProductCollection */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2D9F823D2227800D3BF3E /* ProductCollectionCell */,
+				DEE2D9F923D2227800D3BF3E /* ProductCollectionViewController.swift */,
+				DEE2D9FA23D2227800D3BF3E /* ProductCollectionViewController.storyboard */,
+			);
+			path = ProductCollection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -115,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE0A364E23D1166C007B19CB /* Build configuration list for PBXNativeTarget "UIComponents" */;
 			buildPhases = (
+				E9C1F8CED5FEB6E2D58862CB /* [CP] Check Pods Manifest.lock */,
 				DE0A363523D1166C007B19CB /* Headers */,
 				DE0A363623D1166C007B19CB /* Sources */,
 				DE0A363723D1166C007B19CB /* Frameworks */,
@@ -201,6 +253,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9C1F8CED5FEB6E2D58862CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIComponents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE0A363623D1166C007B19CB /* Sources */ = {
@@ -352,6 +429,7 @@
 		};
 		DE0A364F23D1166C007B19CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A8E38867383EC8F5277DBC /* Pods-UIComponents.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +456,7 @@
 		};
 		DE0A365023D1166C007B19CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2B61C80763D2D27C5E9AA1 /* Pods-UIComponents.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

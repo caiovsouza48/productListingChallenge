@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - AvaliationsAPIResponse
 struct AvaliationsAPIResponse: Codable {
     let classificacao: Double
@@ -32,4 +30,3 @@ struct Opiniao: Codable {
 struct GaleriaMidia: Codable {
     let tipo, link: String
 }
-

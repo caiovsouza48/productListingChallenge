@@ -65,7 +65,8 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
         productDetailsImagesViewController.imagesDataSourceController = ImagesDataSourceController(images: images)
     }
 
-    private func setupProductPriceViewController(previousPrice: Double,
+    private func setupProductPriceViewController(
+        previousPrice: Double,
         currentPrice: Double,
         maxInstallment: Int,
         installmentPrice: Double,
@@ -100,7 +101,7 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
             message: error.localizedDescription,
             preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        let tryAgainAction = UIAlertAction(title: "Tentar Novamente", style: .default) { [unowned self] (action) in
+        let tryAgainAction = UIAlertAction(title: "Tentar Novamente", style: .default) { [unowned self] (_) in
             self.loadProductDetails()
         }
         alertController.addAction(tryAgainAction)
