@@ -53,7 +53,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="305-cP-AKl">
-                                <rect key="frame" x="0.0" y="910" width="414" height="2170"/>
+                                <rect key="frame" x="0.0" y="910" width="414" height="1843"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="305-cP-AKl" secondAttribute="height" multiplier="1:9" priority="240" id="g4b-OR-3xq"/>
                                 </constraints>
@@ -62,7 +62,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdl-JG-M9R">
-                                <rect key="frame" x="0.0" y="3120" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="2793" width="414" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="240" constant="100" id="rfI-4L-KAV"/>
                                 </constraints>
@@ -70,14 +70,14 @@
                                     <segue destination="V3H-tM-HUO" kind="embed" identifier="AvaliationsContainerViewController" id="TQy-Qo-sq2"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproveite e compra também" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heu-lu-Pkc">
-                                <rect key="frame" x="20" y="3260" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproveite e compre também" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heu-lu-Pkc">
+                                <rect key="frame" x="20" y="2933" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUg-qf-Jvr">
-                                <rect key="frame" x="0.0" y="3301" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="2974" width="414" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="240" constant="300" id="dOC-h8-Qg9"/>
                                 </constraints>
@@ -86,16 +86,31 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utz-af-TXq">
-                                <rect key="frame" x="0.0" y="3680" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="3335" width="414" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="LdG-3e-1XY"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="RJO-ah-ZBr" kind="embed" id="HhS-XJ-aiU"/>
+                                    <segue destination="psA-Pu-MKK" kind="embed" identifier="whoSawBoughtTooProductContainerListViewController" id="nKi-4Y-Hcf"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quem viu, comprou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-5N-aKe">
-                                <rect key="frame" x="20" y="3621" width="374" height="21"/>
+                                <rect key="frame" x="20" y="3294" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-bL-2qL">
+                                <rect key="frame" x="0.0" y="3700" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ssX-Yd-Q9F"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="J08-vo-ZsW" kind="embed" identifier="whoSawAlsoProductContainerListViewController" id="tOd-gm-DaO"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quem viu, viu também" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWc-0h-yDG">
+                                <rect key="frame" x="2" y="3659" width="392" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -103,6 +118,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="eSm-ds-bqS" firstAttribute="trailing" secondItem="CWc-0h-yDG" secondAttribute="trailing" constant="20" id="1Dz-Cp-BfD"/>
+                            <constraint firstItem="0TJ-bL-2qL" firstAttribute="leading" secondItem="Utz-af-TXq" secondAttribute="leading" id="1eY-Kn-ctB"/>
                             <constraint firstItem="xdl-JG-M9R" firstAttribute="top" secondItem="305-cP-AKl" secondAttribute="bottom" constant="40" id="27P-8i-VJf"/>
                             <constraint firstItem="eSm-ds-bqS" firstAttribute="trailing" secondItem="wTh-5N-aKe" secondAttribute="trailing" constant="20" id="2cx-zB-I1D"/>
                             <constraint firstItem="305-cP-AKl" firstAttribute="top" secondItem="9W0-UU-KAQ" secondAttribute="bottom" constant="70" id="3HR-kX-I4l"/>
@@ -111,16 +128,18 @@
                             <constraint firstItem="FUg-qf-Jvr" firstAttribute="trailing" secondItem="xdl-JG-M9R" secondAttribute="trailing" id="Ffg-P3-AI3"/>
                             <constraint firstItem="o1V-Kv-8Ny" firstAttribute="top" secondItem="ZFC-qd-adm" secondAttribute="bottom" id="GXI-EA-U2L"/>
                             <constraint firstItem="9W0-UU-KAQ" firstAttribute="leading" secondItem="RKN-QD-ivY" secondAttribute="leading" id="Ks0-ec-F9M"/>
-                            <constraint firstAttribute="bottom" secondItem="Utz-af-TXq" secondAttribute="bottom" constant="20" id="LkO-Pl-gGo"/>
                             <constraint firstItem="o1V-Kv-8Ny" firstAttribute="leading" secondItem="ZFC-qd-adm" secondAttribute="leading" id="Mr0-k5-Gf6"/>
                             <constraint firstItem="9W0-UU-KAQ" firstAttribute="top" secondItem="RKN-QD-ivY" secondAttribute="bottom" constant="30" id="Nma-1W-99g"/>
                             <constraint firstItem="xdl-JG-M9R" firstAttribute="trailing" secondItem="305-cP-AKl" secondAttribute="trailing" id="OKw-3W-o0T"/>
-                            <constraint firstItem="Utz-af-TXq" firstAttribute="top" secondItem="wTh-5N-aKe" secondAttribute="bottom" constant="38" id="OX8-qU-Hug"/>
+                            <constraint firstItem="Utz-af-TXq" firstAttribute="top" secondItem="wTh-5N-aKe" secondAttribute="bottom" constant="20" id="OX8-qU-Hug"/>
+                            <constraint firstAttribute="bottom" secondItem="0TJ-bL-2qL" secondAttribute="bottom" id="Soh-7l-rqs"/>
                             <constraint firstItem="eSm-ds-bqS" firstAttribute="trailing" secondItem="heu-lu-Pkc" secondAttribute="trailing" constant="20" id="T26-DM-sUw"/>
+                            <constraint firstItem="0TJ-bL-2qL" firstAttribute="top" secondItem="CWc-0h-yDG" secondAttribute="bottom" constant="20" id="VPS-sU-eT1"/>
                             <constraint firstItem="FUg-qf-Jvr" firstAttribute="leading" secondItem="xdl-JG-M9R" secondAttribute="leading" id="YE0-WB-9eY"/>
                             <constraint firstItem="RKN-QD-ivY" firstAttribute="top" secondItem="o1V-Kv-8Ny" secondAttribute="bottom" constant="40" id="Ynh-7j-X6r"/>
                             <constraint firstItem="FUg-qf-Jvr" firstAttribute="top" secondItem="heu-lu-Pkc" secondAttribute="bottom" constant="20" id="YtC-Zd-A85"/>
                             <constraint firstItem="RKN-QD-ivY" firstAttribute="trailing" secondItem="o1V-Kv-8Ny" secondAttribute="trailing" id="bVn-hr-lgu"/>
+                            <constraint firstItem="CWc-0h-yDG" firstAttribute="top" secondItem="Utz-af-TXq" secondAttribute="bottom" constant="24" id="bnY-kT-hiy"/>
                             <constraint firstItem="ZFC-qd-adm" firstAttribute="top" secondItem="eSm-ds-bqS" secondAttribute="top" id="dlw-TW-AM0"/>
                             <constraint firstItem="xdl-JG-M9R" firstAttribute="leading" secondItem="305-cP-AKl" secondAttribute="leading" id="fOb-D9-iej"/>
                             <constraint firstItem="Utz-af-TXq" firstAttribute="trailing" secondItem="FUg-qf-Jvr" secondAttribute="trailing" id="iWc-n8-V2R"/>
@@ -131,8 +150,10 @@
                             <constraint firstItem="RKN-QD-ivY" firstAttribute="leading" secondItem="o1V-Kv-8Ny" secondAttribute="leading" id="pzy-6N-zjT"/>
                             <constraint firstItem="ZFC-qd-adm" firstAttribute="leading" secondItem="eSm-ds-bqS" secondAttribute="leading" id="sKk-CX-ngu"/>
                             <constraint firstItem="heu-lu-Pkc" firstAttribute="leading" secondItem="eSm-ds-bqS" secondAttribute="leading" constant="20" id="sLA-Sb-9mb"/>
+                            <constraint firstItem="CWc-0h-yDG" firstAttribute="leading" secondItem="eSm-ds-bqS" secondAttribute="leading" constant="2" id="tNj-xl-cgd"/>
                             <constraint firstItem="wTh-5N-aKe" firstAttribute="top" secondItem="FUg-qf-Jvr" secondAttribute="bottom" constant="20" id="tWp-r1-8uV"/>
                             <constraint firstItem="wTh-5N-aKe" firstAttribute="leading" secondItem="eSm-ds-bqS" secondAttribute="leading" constant="20" id="tbj-Pq-JMz"/>
+                            <constraint firstItem="0TJ-bL-2qL" firstAttribute="trailing" secondItem="Utz-af-TXq" secondAttribute="trailing" id="vus-sQ-fCP"/>
                             <constraint firstItem="305-cP-AKl" firstAttribute="leading" secondItem="9W0-UU-KAQ" secondAttribute="leading" id="z40-66-e1l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eSm-ds-bqS"/>
@@ -169,7 +190,7 @@
                 <viewControllerPlaceholder storyboardName="ProductPriceViewController" id="M8B-ms-zWp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcq-dD-UTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="611" y="-860"/>
+            <point key="canvasLocation" x="611" y="-849"/>
         </scene>
         <!--ProductDescriptionViewController-->
         <scene sceneID="3Jo-3C-H0a">
@@ -177,7 +198,7 @@
                 <viewControllerPlaceholder storyboardName="ProductDescriptionViewController" id="RO3-vw-ao0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65V-FE-ng7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="-744"/>
+            <point key="canvasLocation" x="635" y="-708"/>
         </scene>
         <!--ProductMoreInfoTableViewController-->
         <scene sceneID="eUF-Xc-mNw">
@@ -185,7 +206,7 @@
                 <viewControllerPlaceholder storyboardName="ProductMoreInfoTableViewController" id="aBy-hP-nae" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xd-yM-pwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="-233"/>
+            <point key="canvasLocation" x="651" y="57"/>
         </scene>
         <!--AvaliationsContainerViewController-->
         <scene sceneID="o1S-3X-hDP">
@@ -193,7 +214,7 @@
                 <viewControllerPlaceholder storyboardName="AvaliationsContainerViewController" id="V3H-tM-HUO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgg-WN-qOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="1149"/>
+            <point key="canvasLocation" x="635" y="730"/>
         </scene>
         <!--ProductContainerListViewController-->
         <scene sceneID="m7z-Z2-4wM">
@@ -201,22 +222,23 @@
                 <viewControllerPlaceholder storyboardName="ProductContainerListViewController" id="Xfb-1d-fdq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88R-My-9zQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="1394"/>
+            <point key="canvasLocation" x="639" y="919"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Uge-jw-flN">
+        <!--ProductContainerListViewController-->
+        <scene sceneID="EYx-4s-Swc">
             <objects>
-                <viewController id="RJO-ah-ZBr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W3W-ce-Q6r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="uWh-uw-dQM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HWQ-o3-MUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ProductContainerListViewController" id="psA-Pu-MKK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8PO-UA-zxC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="1546"/>
+            <point key="canvasLocation" x="639" y="1179"/>
+        </scene>
+        <!--ProductContainerListViewController-->
+        <scene sceneID="8jL-wB-81C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductContainerListViewController" id="J08-vo-ZsW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djj-tS-kE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="1415"/>
         </scene>
     </scenes>
 </document>

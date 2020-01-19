@@ -20,6 +20,8 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
     var productMoreInfoTableViewController: ProductMoreInfoTableViewController!
     // swiftlint:disable identifier_name
     var shopTogetherProductContainerListViewController: ProductContainerListViewController!
+    var whoSawBoughtTooProductContainerListViewController: ProductContainerListViewController!
+    var whoSawAlsoBoughtProductContainerListViewController: ProductContainerListViewController!
 
     // MARK: - Controller
     var productDetailsContainerController: ProductDetailsContainerController = ProductDetailsContainerController()
@@ -126,6 +128,12 @@ public final class ProductDetailsContainerViewController: ScrollingContentViewCo
         case "shopTogetherProductContainerListViewController":
             shopTogetherProductContainerListViewController = segue.destination as? ProductContainerListViewController
             shopTogetherProductContainerListViewController.productController = ProductContainerListController(productService: ShopTogetherService())
+        case "whoSawBoughtTooProductContainerListViewController":
+            whoSawBoughtTooProductContainerListViewController = segue.destination as? ProductContainerListViewController
+            whoSawBoughtTooProductContainerListViewController.productController = ProductContainerListController(productService: WhoSawBoughtTooService())
+        case "whoSawAlsoProductContainerListViewController":
+            whoSawAlsoBoughtProductContainerListViewController = segue.destination as? ProductContainerListViewController
+            whoSawAlsoBoughtProductContainerListViewController.productController = ProductContainerListController(productService: WhoSawAlsoService())
         default:
             return
         }
