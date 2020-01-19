@@ -11,26 +11,26 @@ import Common
 import KRLCollectionViewGridLayout
 
 public class ProductCollectionViewController: UICollectionViewController {
-    
+
     // MARK: - Action Closure
     public var onSelectItem: (() -> Void)?
-    
+
     // MARK: - Variables
     lazy var notificationCenter: NotificationCenter = {
-           return NotificationCenter.default
+        return NotificationCenter.default
     }()
-    
+
     /// Set True to border the UICollectionViewCells
     public var bordered: Bool = true
-    
+
     // MARK: - Controllers
-    
+
     public var productDatasourceController: DatasourceController<ProductFacade, ProductCollectionViewCell> = .buildEmpty() {
         didSet { collectionView.reloadData() }
     }
-    
+
     public var sortController: CollectionSortController?
-    
+
     // MARK: - View Lifecycle
 
     override public func viewDidLoad() {
@@ -38,18 +38,18 @@ public class ProductCollectionViewController: UICollectionViewController {
         registerProductDataSourceObserver()
         self.collectionView.registerNibFileBasedCell(cellType: ProductCollectionViewCell.self)
     }
-    
+
     private func registerProductDataSourceObserver() {
         notificationCenter.addObserver(self,
-                                       selector: #selector(dataSourceChanged(_:)),
-                                       name: .ProductDatasourceUpdated,
-                                       object: nil)
+            selector: #selector(dataSourceChanged(_:)),
+            name: .ProductDatasourceUpdated,
+            object: nil)
     }
-    
+
     @objc func dataSourceChanged(_ notification: Notification) {
         collectionView.reloadData()
     }
-    
+
     // MARK: UICollectionViewDataSource
 
     override public func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -66,9 +66,9 @@ public class ProductCollectionViewController: UICollectionViewController {
         if bordered { cell.setupBorder() }
         return cell
     }
-    
+
     override public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         onSelectItem?()
     }
-    
+
 }
