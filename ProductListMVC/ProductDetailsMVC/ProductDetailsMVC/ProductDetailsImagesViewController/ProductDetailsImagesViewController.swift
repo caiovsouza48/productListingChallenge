@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ScrollingContentViewController
 
 /// This class controls a scrollable image View with a Page Control
 final class ProductDetailsImagesViewController: UIViewController {

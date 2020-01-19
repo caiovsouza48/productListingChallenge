@@ -11,6 +11,12 @@
 		DE0A364423D1166C007B19CB /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0A363A23D1166C007B19CB /* UIComponents.framework */; };
 		DE0A364923D1166C007B19CB /* UIComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0A364823D1166C007B19CB /* UIComponentsTests.swift */; };
 		DE0A364B23D1166C007B19CB /* UIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = DE0A363D23D1166C007B19CB /* UIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE0FB18E23D226B00076B846 /* ProductCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FB18D23D226B00076B846 /* ProductCollectionViewController.swift */; };
+		DE0FB19723D2295A0076B846 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FB19623D2295A0076B846 /* ProductCollectionViewCell.swift */; };
+		DE6084C123D2A0260031E85B /* DatasourceController+Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6084C023D2A0260031E85B /* DatasourceController+Produto.swift */; };
+		DE6084C323D2A5490031E85B /* CollectionSortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6084C223D2A5490031E85B /* CollectionSortController.swift */; };
+		DE8DE0BB23D2304400A6F12A /* ProductCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8DE0BA23D2304400A6F12A /* ProductCollectionViewController.storyboard */; };
+		DE8DE0BD23D230A900A6F12A /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8DE0BC23D230A900A6F12A /* ProductCollectionViewCell.xib */; };
 		DEF53F4F23D117C5002636DD /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF53F4E23D117C5002636DD /* ArrowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +40,14 @@
 		DE0A364323D1166C007B19CB /* UIComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0A364823D1166C007B19CB /* UIComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentsTests.swift; sourceTree = "<group>"; };
 		DE0A364A23D1166C007B19CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEE2D9F523D2227800D3BF3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		DEE2D9F623D2227800D3BF3E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
-		DEE2D9F723D2227800D3BF3E /* ProductDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDatasourceController.swift; sourceTree = "<group>"; };
-		DEE2D9F923D2227800D3BF3E /* ProductCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewController.swift; sourceTree = "<group>"; };
-		DEE2D9FA23D2227800D3BF3E /* ProductCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductCollectionViewController.storyboard; sourceTree = "<group>"; };
+		DE0FB18D23D226B00076B846 /* ProductCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewController.swift; sourceTree = "<group>"; };
+		DE0FB19623D2295A0076B846 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE2F3DB223D2B1C6002BD8E0 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6084C023D2A0260031E85B /* DatasourceController+Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatasourceController+Produto.swift"; sourceTree = "<group>"; };
+		DE6084C223D2A5490031E85B /* CollectionSortController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSortController.swift; sourceTree = "<group>"; };
+		DE6084C423D2B0A60031E85B /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8DE0BA23D2304400A6F12A /* ProductCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductCollectionViewController.storyboard; sourceTree = "<group>"; };
+		DE8DE0BC23D230A900A6F12A /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		DEF53F4E23D117C5002636DD /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +74,8 @@
 		266A1BC250BA389D3F38D682 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE2F3DB223D2B1C6002BD8E0 /* Common.framework */,
+				DE6084C423D2B0A60031E85B /* Common.framework */,
 				C89AD23B0C78F109DD15D808 /* Pods_UIComponents.framework */,
 			);
 			name = Frameworks;
@@ -128,12 +139,20 @@
 			path = ArrowView;
 			sourceTree = "<group>";
 		};
+		DE6084BF23D29FFB0031E85B /* DatasourceControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE6084C023D2A0260031E85B /* DatasourceController+Produto.swift */,
+			);
+			path = DatasourceControllerExtensions;
+			sourceTree = "<group>";
+		};
 		DEE2D9F823D2227800D3BF3E /* ProductCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				DEE2D9F523D2227800D3BF3E /* ProductCollectionViewCell.swift */,
-				DEE2D9F623D2227800D3BF3E /* ProductCollectionViewCell.xib */,
-				DEE2D9F723D2227800D3BF3E /* ProductDatasourceController.swift */,
+				DE6084BF23D29FFB0031E85B /* DatasourceControllerExtensions */,
+				DE0FB19623D2295A0076B846 /* ProductCollectionViewCell.swift */,
+				DE8DE0BC23D230A900A6F12A /* ProductCollectionViewCell.xib */,
 			);
 			path = ProductCollectionCell;
 			sourceTree = "<group>";
@@ -142,8 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				DEE2D9F823D2227800D3BF3E /* ProductCollectionCell */,
-				DEE2D9F923D2227800D3BF3E /* ProductCollectionViewController.swift */,
-				DEE2D9FA23D2227800D3BF3E /* ProductCollectionViewController.storyboard */,
+				DE0FB18D23D226B00076B846 /* ProductCollectionViewController.swift */,
+				DE8DE0BA23D2304400A6F12A /* ProductCollectionViewController.storyboard */,
+				DE6084C223D2A5490031E85B /* CollectionSortController.swift */,
 			);
 			path = ProductCollection;
 			sourceTree = "<group>";
@@ -242,6 +262,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8DE0BD23D230A900A6F12A /* ProductCollectionViewCell.xib in Resources */,
+				DE8DE0BB23D2304400A6F12A /* ProductCollectionViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0FB18E23D226B00076B846 /* ProductCollectionViewController.swift in Sources */,
 				DEF53F4F23D117C5002636DD /* ArrowView.swift in Sources */,
+				DE0FB19723D2295A0076B846 /* ProductCollectionViewCell.swift in Sources */,
+				DE6084C323D2A5490031E85B /* CollectionSortController.swift in Sources */,
+				DE6084C123D2A0260031E85B /* DatasourceController+Produto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

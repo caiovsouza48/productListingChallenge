@@ -7,53 +7,68 @@
 //
 
 import UIKit
+import Common
 import KRLCollectionViewGridLayout
 
 public class ProductCollectionViewController: UICollectionViewController {
     
     // MARK: - Action Closure
-    var onSelectItem: ((Produto) -> Void)?
+    public var onSelectItem: (() -> Void)?
     
     // MARK: - Variables
-    public var productDatasourceController: ProductDatasourceController = ProductDatasourceController(dataSource: []) {
+    lazy var notificationCenter: NotificationCenter = {
+           return NotificationCenter.default
+    }()
+    
+    /// Set True to border the UICollectionViewCells
+    public var bordered: Bool = true
+    
+    // MARK: - Controllers
+    
+    public var productDatasourceController: DatasourceController<ProductFacade, ProductCollectionViewCell> = .buildEmpty() {
         didSet { collectionView.reloadData() }
     }
     
+    public var sortController: CollectionSortController?
+    
     // MARK: - View Lifecycle
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+        registerProductDataSourceObserver()
         self.collectionView.registerNibFileBasedCell(cellType: ProductCollectionViewCell.self)
+    }
+    
+    private func registerProductDataSourceObserver() {
+        notificationCenter.addObserver(self,
+                                       selector: #selector(dataSourceChanged(_:)),
+                                       name: .ProductDatasourceUpdated,
+                                       object: nil)
+    }
+    
+    @objc func dataSourceChanged(_ notification: Notification) {
+        collectionView.reloadData()
     }
     
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productDatasourceController.numberOfProducts()
+    override public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return productDatasourceController.models.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ProductCollectionViewCell.self)
-        let product = productDatasourceController.productAt(indexPath.item)
-        productDatasourceController.asyncImageFor(productUrl: product.imagemURL) { (image) in
-            DispatchQueue.main.async { cell.productImageView.image = image }
-        }
-        cell.configure(withDescription: product.descricao,
-                       rating: product.classificacao,
-                       previousPrice: product.preco.precoAnterior,
-                       currentPrice: product.preco.precoAtual,
-                       maxInstallment: product.preco.quantidadeMaximaParcelas,
-                       installmentPrice: product.preco.valorParcela)
-    
+        productDatasourceController.configure(cell: cell, forIndexPath: indexPath)
+        if bordered { cell.setupBorder() }
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let produto = productDatasourceController.productAt(indexPath.item)
-        onSelectItem?(produto)
+    override public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onSelectItem?()
     }
+    
 }

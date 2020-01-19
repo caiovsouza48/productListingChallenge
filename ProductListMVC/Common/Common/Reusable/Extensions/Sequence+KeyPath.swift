@@ -28,7 +28,10 @@ public struct PartialComparableKeyPath<Root> {
     }
 }
 
+// MARK: - Sequence sorted by KeyPath
+
 extension Sequence {
+
     public func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>) -> [Element] {
         return sorted { firstElement, secondElement in
             return firstElement[keyPath: keyPath] < secondElement[keyPath: keyPath]
@@ -45,5 +48,13 @@ extension Sequence {
             return false
         }
     }
+}
 
+// MARK: - Reference Sort by keyPath
+extension MutableCollection where Self: RandomAccessCollection {
+    @inlinable public mutating func sort<T: Comparable>(keyPath: KeyPath<Element, T>) {
+        sort(by: { (firstElement, secondElement) -> Bool in
+            return firstElement[keyPath: keyPath] < secondElement[keyPath: keyPath]
+        })
+    }
 }

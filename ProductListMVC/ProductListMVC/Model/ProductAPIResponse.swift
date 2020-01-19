@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import struct Common.Produto
 
 // MARK: - ProductAPIResponse
 struct ProductAPIResponse: Codable {

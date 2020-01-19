@@ -33,7 +33,7 @@ class MainCoordinator: Coordinator {
     
     private func setupProductContainerViewController(_ viewController: ProductContainerViewController) {
         viewController.title = "Lista de Produtos"
-        viewController.onProductSelected = { [unowned self] produto in
+        viewController.onProductSelected = { [unowned self] in
             self.goToProductDetails()
         }
     }

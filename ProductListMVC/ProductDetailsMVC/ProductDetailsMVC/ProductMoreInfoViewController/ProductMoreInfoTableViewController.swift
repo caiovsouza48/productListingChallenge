@@ -20,7 +20,6 @@ final class ProductMoreInfoTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "TitleLabelHeader", bundle: Bundle(for: type(of: self))), forHeaderFooterViewReuseIdentifier: "TitleLabelHeader")
         tableView.registerNibFileBasedCell(cellType: MoreInfoTableViewCell.self)
-
     }
 
     override func viewWillLayoutSubviews() {
@@ -42,6 +41,7 @@ final class ProductMoreInfoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MoreInfoTableViewCell.self)
         let value = dataSourceController.moreInfoValueAt(indexPath.row, section: indexPath.section)
+        /// Cell removing repeated whitespaces at the end
         cell.configure(withTitle: value.nome,
             infoDescription: MoreInfoDataPresentationController.replacedValueDescription(value: value.valor,
                 withRegex: "\\s+$"))

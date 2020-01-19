@@ -19,7 +19,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-QF-rKG">
                                 <rect key="frame" x="0.0" y="44" width="414" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="IT9-zl-30p"/>
+                                    <constraint firstAttribute="height" priority="240" constant="150" id="IT9-zl-30p"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="9rM-Rj-cxd" kind="embed" identifier="ProductAvaliationMeanViewController" id="e4y-Gn-uJp"/>
