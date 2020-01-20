@@ -30,7 +30,7 @@ class ProductCollectionViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func loadView(){
+    func loadView() {
         window.addSubview(subject.view)
         RunLoop.current.run(until: Date())
     }
@@ -43,7 +43,7 @@ class ProductCollectionViewControllerTests: XCTestCase {
             reloadDataCalled = true
         }
     }
-
+    
     func testSetDataSourceControllerShouldReloadViewController() {
 
         // Given
@@ -61,20 +61,48 @@ class ProductCollectionViewControllerTests: XCTestCase {
         XCTAssert(collectionViewSpy.reloadDataCalled, "DatasourceController should reload data in collectionView")
     }
 
-    func testCollectionViewCellShouldDisplayModelData() {
+    //swift
+    func testCollectionViewCellShouldDisplayModelData() throws {
         // Given
         loadView()
-        let collectionView = try! require(subject.collectionView)
+        let collectionView = try require(subject.collectionView)
         let product = Seeds.ProductDataSource.dataSource.first!
         let dataSourceController: DatasourceController<ProductFacade, ProductCollectionViewCell> = .build(for: Seeds.ProductDataSource.dataSource)
         subject.productDatasourceController = dataSourceController
+        let indexPath = IndexPath(item: 0, section: 0)
+        let priceFormat: String = "R$ %.2f"
 
         // When
         subject.collectionView.reloadData()
-        let cell = collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as! ProductCollectionViewCell
+        let cell = try require(subject.collectionView(collectionView,
+                                                       cellForItemAt: indexPath) as? ProductCollectionViewCell)
 
         // Then
-        XCTAssert(cell.currentPriceLabel.text == String.localizedStringWithFormat("%.2f", product.displayCurrentPrice), "Cell Should be configured to display the Rounded Current Price")
-
+        XCTAssertEqual(cell.currentPriceLabel.text,
+                       String.localizedStringWithFormat(priceFormat,
+                                                        product.displayCurrentPrice),
+                       "Cell Should be configured to display the Rounded Current Price")
+        XCTAssertEqual(cell.installmentPriceLabel.text,
+                       product.displayInstallment,
+                       "Cell Should be configured to display the Installment Label")
+    }
+    
+    func testCollectionViewShouldCallClosureWhenTapped() throws {
+        // Given
+        loadView()
+        let collectionView = try require(subject.collectionView)
+        let dataSourceController: DatasourceController<ProductFacade, ProductCollectionViewCell> = .build(for: Seeds.ProductDataSource.dataSource)
+        subject.productDatasourceController = dataSourceController
+        let closureExpectation = self.expectation(description: "Expect Closure to be Called when item is tapped")
+        subject.onSelectItem = {
+            closureExpectation.fulfill()
+        }
+        
+        // When
+        let indexPath = IndexPath(row: 0, section: 0)
+        subject.collectionView(collectionView, didSelectItemAt: indexPath)
+        
+        // Then
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
 }

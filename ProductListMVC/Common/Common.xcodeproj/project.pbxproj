@@ -93,17 +93,9 @@
 		DE08B10823D298EE00D1EE07 /* DataSourceController */ = {
 			isa = PBXGroup;
 			children = (
-				DE08B10B23D299B400D1EE07 /* GenericCell */,
 				DE08B10923D2990D00D1EE07 /* DatasourceController.swift */,
 			);
 			path = DataSourceController;
-			sourceTree = "<group>";
-		};
-		DE08B10B23D299B400D1EE07 /* GenericCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GenericCell;
 			sourceTree = "<group>";
 		};
 		DE0FB19123D228840076B846 /* Model */ = {

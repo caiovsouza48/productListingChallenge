@@ -24,5 +24,4 @@ struct TestProduct: ProductFacade {
     
     var displayRating: Double { return 4.5 }
     
-    
 }
