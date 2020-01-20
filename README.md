@@ -3,8 +3,8 @@ A Product List application using MVC + Coordinator
 
 # How to Run
 - Run ```swift
-pod install
-```
+pod install```
+
 - Install swiftLint: https://github.com/swiftlint/swiftlint
 
 
