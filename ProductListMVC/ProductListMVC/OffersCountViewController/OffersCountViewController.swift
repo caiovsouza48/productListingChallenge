@@ -8,17 +8,15 @@
 
 import UIKit
 
-
 /// Display a View With a Label containing the quantity of Offers
 final class OffersCountViewController: UIViewController {
-    
     
     // MARK: - Outlets
     @IBOutlet private var offersCountLabel: UILabel!
     
     // MARK: - Variables
     var offersCountPresentation: OffersCountPresentationController = OffersCountPresentationController(offersCount: 0) {
-        didSet{
+        didSet {
             setupOffersCountLabel()
         }
     }

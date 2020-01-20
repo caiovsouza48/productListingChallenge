@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lcH-Ie-A84">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Details Name View Controller-->
+        <scene sceneID="LQh-lu-cks">
+            <objects>
+                <viewController id="lcH-Ie-A84" customClass="ProductDetailsNameViewController" customModule="ProductDetailsMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFe-Ai-UWW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart TV" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks5-yR-h3c">
+                                <rect key="frame" x="20" y="44" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cod. Item " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlu-J8-wZx">
+                                <rect key="frame" x="20" y="72.5" width="58.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1V0-V0-jWp" firstAttribute="trailing" secondItem="ks5-yR-h3c" secondAttribute="trailing" constant="20" id="Tfz-CH-On4"/>
+                            <constraint firstItem="xlu-J8-wZx" firstAttribute="top" secondItem="ks5-yR-h3c" secondAttribute="bottom" constant="8" id="dQ7-dr-NZu"/>
+                            <constraint firstItem="ks5-yR-h3c" firstAttribute="top" secondItem="1V0-V0-jWp" secondAttribute="top" id="poR-Mp-Wad"/>
+                            <constraint firstItem="xlu-J8-wZx" firstAttribute="leading" secondItem="ks5-yR-h3c" secondAttribute="leading" id="sZ9-mb-0Ir"/>
+                            <constraint firstItem="ks5-yR-h3c" firstAttribute="leading" secondItem="1V0-V0-jWp" secondAttribute="leading" constant="20" id="tPh-jz-1e1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1V0-V0-jWp"/>
+                    </view>
+                    <connections>
+                        <outlet property="codeLabel" destination="xlu-J8-wZx" id="MXA-sA-9VX"/>
+                        <outlet property="nameLabel" destination="ks5-yR-h3c" id="dEk-kP-qGj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNM-Ra-dJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="-211"/>
+        </scene>
+    </scenes>
+</document>

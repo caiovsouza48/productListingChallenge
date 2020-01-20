@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Mr-6g-idc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Details Images View Controller-->
+        <scene sceneID="cfn-7Q-0of">
+            <objects>
+                <viewController id="8Mr-6g-idc" customClass="ProductDetailsImagesViewController" customModule="ProductDetailsMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8HA-2n-ULw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTg-Ng-9EC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-he-MU7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="798"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZOb-he-MU7" secondAttribute="trailing" id="1Bo-PS-QSm"/>
+                                    <constraint firstItem="ZOb-he-MU7" firstAttribute="centerX" secondItem="oTg-Ng-9EC" secondAttribute="centerX" id="6QL-w5-YKW"/>
+                                    <constraint firstItem="ZOb-he-MU7" firstAttribute="leading" secondItem="oTg-Ng-9EC" secondAttribute="leading" id="AYm-14-lRN"/>
+                                    <constraint firstItem="ZOb-he-MU7" firstAttribute="top" secondItem="oTg-Ng-9EC" secondAttribute="top" id="Kz4-Bf-wPe"/>
+                                    <constraint firstItem="ZOb-he-MU7" firstAttribute="centerY" secondItem="oTg-Ng-9EC" secondAttribute="centerY" id="Wyg-vV-Rcb"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZOb-he-MU7" secondAttribute="bottom" id="i8e-fv-htg"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="xPr-bU-UGW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="bVF-nQ-xyB"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8HW-0H-vNm">
+                                <rect key="frame" x="187.5" y="825" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8HW-0H-vNm" firstAttribute="centerX" secondItem="agO-52-1sS" secondAttribute="centerX" id="VlZ-2a-sLQ"/>
+                            <constraint firstItem="agO-52-1sS" firstAttribute="trailing" secondItem="oTg-Ng-9EC" secondAttribute="trailing" id="YGG-M2-m4G"/>
+                            <constraint firstItem="agO-52-1sS" firstAttribute="bottom" secondItem="oTg-Ng-9EC" secondAttribute="bottom" constant="20" id="on9-8b-ZGD"/>
+                            <constraint firstItem="oTg-Ng-9EC" firstAttribute="top" secondItem="agO-52-1sS" secondAttribute="top" id="sDN-GM-Amv"/>
+                            <constraint firstItem="agO-52-1sS" firstAttribute="bottom" secondItem="8HW-0H-vNm" secondAttribute="bottom" id="sgD-ix-JqV"/>
+                            <constraint firstItem="oTg-Ng-9EC" firstAttribute="leading" secondItem="agO-52-1sS" secondAttribute="leading" id="yeA-ez-Yj9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="agO-52-1sS"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="8HW-0H-vNm" id="hon-54-XUe"/>
+                        <outlet property="scrollContentView" destination="ZOb-he-MU7" id="YFe-WV-1hn"/>
+                        <outlet property="scrollView" destination="oTg-Ng-9EC" id="MCy-Vg-VoW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1g-P8-Sgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="145"/>
+        </scene>
+    </scenes>
+</document>

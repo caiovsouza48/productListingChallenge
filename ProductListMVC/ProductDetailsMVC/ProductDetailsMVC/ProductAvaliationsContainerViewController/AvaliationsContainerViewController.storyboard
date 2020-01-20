@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iYs-D9-vH1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Avaliations Container View Controller-->
+        <scene sceneID="UrZ-tp-MkU">
+            <objects>
+                <viewController id="iYs-D9-vH1" customClass="AvaliationsContainerViewController" customModule="ProductDetailsMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jqg-xB-52P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-QF-rKG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="240" constant="150" id="IT9-zl-30p"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="9rM-Rj-cxd" kind="embed" identifier="ProductAvaliationMeanViewController" id="e4y-Gn-uJp"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geN-61-670">
+                                <rect key="frame" x="0.0" y="194" width="414" height="668"/>
+                                <connections>
+                                    <segue destination="34h-oj-xJf" kind="embed" identifier="ProductUserAvaliationsTableViewController" id="sj5-SO-1ee"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eFy-QF-rKG" firstAttribute="leading" secondItem="gY3-QI-Lud" secondAttribute="leading" id="4a0-3w-Yau"/>
+                            <constraint firstItem="geN-61-670" firstAttribute="trailing" secondItem="eFy-QF-rKG" secondAttribute="trailing" id="Wgw-tm-MT6"/>
+                            <constraint firstItem="geN-61-670" firstAttribute="top" secondItem="eFy-QF-rKG" secondAttribute="bottom" id="j0w-sp-CMP"/>
+                            <constraint firstItem="eFy-QF-rKG" firstAttribute="top" secondItem="gY3-QI-Lud" secondAttribute="top" id="kNK-mw-HKk"/>
+                            <constraint firstItem="gY3-QI-Lud" firstAttribute="trailing" secondItem="eFy-QF-rKG" secondAttribute="trailing" id="oNI-oQ-haS"/>
+                            <constraint firstItem="geN-61-670" firstAttribute="leading" secondItem="eFy-QF-rKG" secondAttribute="leading" id="uYG-Gp-aKx"/>
+                            <constraint firstItem="gY3-QI-Lud" firstAttribute="bottom" secondItem="geN-61-670" secondAttribute="bottom" id="xvH-2e-rxu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gY3-QI-Lud"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="diN-ei-3xs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="98"/>
+        </scene>
+        <!--ProductAvaliationMeanViewController-->
+        <scene sceneID="1h4-5d-bgK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductAvaliationMeanViewController" id="9rM-Rj-cxd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqh-06-gAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="-120"/>
+        </scene>
+        <!--ProductUserAvaliationsTableViewController-->
+        <scene sceneID="Pgq-vS-ais">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductUserAvaliationsTableViewController" id="34h-oj-xJf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pan-md-pD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701" y="188"/>
+        </scene>
+    </scenes>
+</document>

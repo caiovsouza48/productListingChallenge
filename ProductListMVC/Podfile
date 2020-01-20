@@ -4,10 +4,15 @@ use_frameworks!
 
 workspace 'ProductListMVC'
 
-target 'ProductListMVC' do
-  project 'ProductListMVC.xcodeproj'
+def layout
   pod 'Cosmos', '~> 20.0'
   pod "KRLCollectionViewGridLayout", "~> 1.0.0"
+  pod 'ScrollingContentViewController'
+end
+
+target 'ProductListMVC' do
+  project 'ProductListMVC.xcodeproj'
+  layout
   
   target 'ProductListMVCTests' do
     inherit! :search_paths
@@ -17,6 +22,23 @@ target 'ProductListMVC' do
   target 'ProductListMVCUITests' do
     # Pods for testing
   end
-
 end
+
+target 'ProductDetailsMVC' do
+  project 'ProductDetailsMVC/ProductDetailsMVC.xcodeproj'
+  pod 'ScrollingContentViewController'
+  pod 'Cosmos', '~> 20.0'
+end
+
+target 'UIComponents' do
+  project 'UIComponents/UIComponents.xcodeproj'
+  layout
+
+  target 'UIComponentsTests' do
+    inherit! :search_paths
+    layout
+  end
+end
+
+
 

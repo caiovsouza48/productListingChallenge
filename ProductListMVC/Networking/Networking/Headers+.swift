@@ -12,9 +12,8 @@ public extension Headers {
     
     var `default`: Headers {
         return [
-            "Content-Type" : "application/json",
+            "Content-Type": "application/json"
         ]
     }
     
 }
-

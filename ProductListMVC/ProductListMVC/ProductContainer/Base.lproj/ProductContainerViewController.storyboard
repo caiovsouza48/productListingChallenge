@@ -80,10 +80,10 @@
         <!--ProductCollectionViewController-->
         <scene sceneID="LTl-lx-BMW">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProductCollectionViewController" id="Evk-lS-dYe" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ProductCollectionViewController" bundleIdentifier="disruptive.UIComponents" id="Evk-lS-dYe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZX4-uI-anK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="64"/>
+            <point key="canvasLocation" x="763" y="138"/>
         </scene>
     </scenes>
 </document>

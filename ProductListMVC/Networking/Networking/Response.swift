@@ -103,7 +103,10 @@ public extension Response {
     ///
     /// - parameter atKeyPath: Optional key path at which to parse object.
     /// - parameter using: A `JSONDecoder` instance which is used to decode data to an object.
-    func map<D: Decodable>(_ type: D.Type, atKeyPath keyPath: String? = nil, using decoder: JSONDecoder = JSONDecoder(), failsOnEmptyData: Bool = true) throws -> D {
+    func map<D: Decodable>(_ type: D.Type,
+                           atKeyPath keyPath: String? = nil,
+                           using decoder: JSONDecoder = JSONDecoder(),
+                           failsOnEmptyData: Bool = true) throws -> D {
         decoder.dateDecodingStrategy = .formatted(Formatter.iso8601)
         let serializeToData: (Any) throws -> Data? = { (jsonObject) in
             guard JSONSerialization.isValidJSONObject(jsonObject) else {

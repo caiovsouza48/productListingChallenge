@@ -7,10 +7,10 @@
 //
 
 import Foundation
+import struct Common.Produto
 
 // MARK: - ProductAPIResponse
 struct ProductAPIResponse: Codable {
     let produtos: [Produto]
     let quantidade: Int
 }
-
